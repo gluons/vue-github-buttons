@@ -1,0 +1,8 @@
+<template>
+	<div id="app">
+		<gh-btns-watch slug="vuejs/vue" show-count></gh-btns-watch>
+		<gh-btns-star slug="vuejs/vue" show-count></gh-btns-star>
+		<gh-btns-fork slug="vuejs/vue" show-count></gh-btns-fork>
+		<gh-btns-follow user="gluons" show-count></gh-btns-follow>
+	</div>
+</template>

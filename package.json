@@ -1,0 +1,61 @@
+{
+  "name": "vue-github-buttons",
+  "description": "GitHub buttons component for Vue.",
+  "version": "1.0.0",
+  "main": "dist/vue-github-buttons.js",
+  "author": "Saran Tanpituckpong <sarunta@gmail.com>",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gluons/vue-github-buttons.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gluons/vue-github-buttons/issues"
+  },
+  "homepage": "https://github.com/gluons/vue-github-buttons",
+  "keywords": [
+    "vue",
+    "vuejs",
+    "vue-component",
+    "github",
+    "buttons"
+  ],
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo lol",
+    "test:unit": "vbuild -c vbuild.unit.js",
+    "lint": "vbuild -c vbuild.example.js --eslint",
+    "prebuild": "node ./resource/extractor",
+    "build": "npm run build:cjs && npm run build:umd",
+    "build:cjs": "vbuild -c vbuild.component.js --format cjs",
+    "build:umd": "vbuild -c vbuild.component.js --format umd",
+    "example": "vbuild -c vbuild.example.js -d",
+    "deploy": "vbuild -c vbuild.example.js && gh-pages -d dist-example"
+  },
+  "peerDependencies": {
+    "vue": "2.x"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.7.7",
+    "camelcase": "^4.0.0",
+    "eslint": "^3.18.0",
+    "eslint-config-gluons": "^1.0.4",
+    "eslint-plugin-vue": "^2.0.1",
+    "fs-promise": "^2.0.0",
+    "gh-pages": "^0.12.0",
+    "node-sass": "^4.5.0",
+    "sass-loader": "^6.0.3",
+    "vbuild": "^6.0.0",
+    "vbuild-karma": "^1.0.0",
+    "vue": "^2.2.4",
+    "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "es6-promise": "^4.1.0",
+    "format-thousands": "^1.1.0",
+    "octicons": "^5.0.1",
+    "unfetch": "^2.1.2"
+  }
+}

@@ -1,0 +1,13 @@
+{
+	"root": true,
+	"env": {
+		"jasmine": true
+	},
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"extends": "gluons",
+	"plugins": [
+		"vue"
+	]
+}
