@@ -24,7 +24,7 @@
     "dist"
   ],
   "scripts": {
-    "test": "echo lol",
+    "test": "npm run test:unit",
     "test:unit": "vbuild -c vbuild.unit.js",
     "lint": "vbuild -c vbuild.example.js --eslint",
     "prebuild": "node ./resource/extractor",
