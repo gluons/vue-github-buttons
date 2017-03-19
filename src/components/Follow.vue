@@ -16,6 +16,7 @@ import { markGithub } from '../../resource';
 import { ghGet } from '../../lib/utils.js';
 
 export default {
+	name: 'gh-btns-follow',
 	components: {
 		'gh-button': Button
 	},

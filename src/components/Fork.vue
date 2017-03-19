@@ -16,6 +16,7 @@ import { repoForked } from '../../resource';
 import { ghGet } from '../../lib/utils.js';
 
 export default {
+	name: 'gh-btns-fork',
 	components: {
 		'gh-button': Button
 	},

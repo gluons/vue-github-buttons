@@ -39,6 +39,7 @@ const GH_URL = 'https://github.com';
 let isset = value => (typeof value !== 'undefined') && (value != null) && (value != '');
 
 export default {
+	name: 'gh-btns',
 	props: {
 		icon: {
 			validator(value) {

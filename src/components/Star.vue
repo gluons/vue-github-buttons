@@ -16,6 +16,7 @@ import { star } from '../../resource';
 import { ghGet } from '../../lib/utils.js';
 
 export default {
+	name: 'gh-btns-star',
 	components: {
 		'gh-button': Button
 	},

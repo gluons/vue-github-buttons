@@ -16,6 +16,7 @@ import { eye } from '../../resource';
 import { ghGet } from '../../lib/utils.js';
 
 export default {
+	name: 'gh-btns-watch',
 	components: {
 		'gh-button': Button
 	},
