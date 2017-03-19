@@ -29,9 +29,13 @@
     "lint": "vbuild -c vbuild.example.js --eslint",
     "prebuild": "node ./resource/extractor",
     "build": "npm run build:cjs && npm run build:umd",
-    "build:cjs": "vbuild -c vbuild.component.js --format cjs",
-    "build:umd": "vbuild -c vbuild.component.js --format umd",
-    "example": "vbuild -c vbuild.example.js -d",
+    "build:cjs": "npm run build:cjs.unmin && npm run build:cjs.min",
+    "build:cjs.unmin": "vbuild -c vbuild.component.js --format cjs",
+    "build:cjs.min": "vbuild -c vbuild.component.minimize.js --format cjs",
+    "build:umd": "npm run build:umd.unmin && npm run build:umd.min",
+    "build:umd.unmin": "vbuild -c vbuild.component.js --format umd",
+    "build:umd.min": "vbuild -c vbuild.component.minimize.js --format umd",
+    "example": "vbuild -c vbuild.example.js -d -o",
     "deploy": "vbuild -c vbuild.example.js && gh-pages -d dist-example"
   },
   "peerDependencies": {
