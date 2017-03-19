@@ -1,4 +1,4 @@
-# vue-github-buttons
+# Vue GitHub Buttons
 
 GitHub buttons component for Vue.
 

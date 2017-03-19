@@ -4,6 +4,7 @@ node_modules
 
 # produced by vbuild
 dist-example
+dist
 
 # dev token
 .gh-token
