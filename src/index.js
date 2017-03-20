@@ -14,7 +14,8 @@ export default {
 		if (options.useCache) {
 			Vue.mixin({
 				beforeCreate() {
-					this.useCache = true;
+					// Use `_vue-github-buttons_useCache` as parameter for injecting into components.
+					this['_vue-github-buttons_useCache'] = true;
 				}
 			});
 		}

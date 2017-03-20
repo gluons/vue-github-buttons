@@ -1,20 +1,15 @@
 import Vue from 'vue';
+import VueGitHubButtons from '../../src/index';
 import Watch from '@/components/Watch.vue';
 
 describe('Watch', () => {
+	Vue.use(VueGitHubButtons);
 	let Ctor = Vue.extend(Watch);
 	const vm = new Ctor({
 		propsData: {
 			slug: 'gluons/vue-github-buttons',
 			showCount: true
-		},
-		mixins: [
-			{
-				beforeCreate() {
-					this.useCache = true;
-				}
-			}
-		]
+		}
 	}).$mount();
 
 	it('has expected name', () => {
@@ -32,7 +27,7 @@ describe('Watch', () => {
 		expect(icon.width).toBeTruthy();
 		expect(icon.height).toBeTruthy();
 	});
-	it('has expected computed values', () => {
-		expect(vm.useCache).toBeDefined();
+	it('has expected custom values', () => {
+		expect(vm['_vue-github-buttons_useCache']).toBeDefined();
 	});
 });

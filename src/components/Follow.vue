@@ -44,7 +44,7 @@ export default {
 	},
 	created() {
 		if (this.showCount) {
-			let useCache = this.useCache ? true : false;
+			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
 			ghGet(`/users/${this.user}`, useCache).then(
 				res => {
 					this.count = parseInt(res['followers']);
@@ -57,7 +57,7 @@ export default {
 	},
 	updated() {
 		if (this.showCount) {
-			let useCache = this.useCache ? true : false;
+			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
 			ghGet(`/users/${this.user}`, useCache).then(
 				res => {
 					this.count = parseInt(res['followers']);
