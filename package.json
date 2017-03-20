@@ -1,7 +1,7 @@
 {
   "name": "vue-github-buttons",
   "description": "GitHub buttons component for Vue.",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "dist/vue-github-buttons.js",
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "Apache-2.0",
