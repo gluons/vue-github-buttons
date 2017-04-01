@@ -72,7 +72,7 @@ export default {
 	computed: {
 		hasCount() {
 			let count = this.count;
-			// Show count when count exist and greater than 0.
+			// Show count when count exist and greater than or equal to 0.
 			return (typeof count !== 'undefined') && (count != null) && (count >= 0);
 		},
 		hasCountLink() {
