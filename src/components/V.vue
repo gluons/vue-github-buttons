@@ -1,0 +1,23 @@
+<template lang="pug">
+span.v-char V
+</template>
+
+<script>
+export default {
+	name: 'v'
+};
+</script>
+
+<style>
+.v-char {
+	display: inline-block;
+	background-image: url('../assets/logo.png');
+	background-position: center bottom;
+	background-size: contain;
+	background-repeat: no-repeat;
+	color: transparent;
+	width: 40px;
+	height: 40px;
+	margin-right: -5px;
+}
+</style>

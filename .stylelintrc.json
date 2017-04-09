@@ -1,0 +1,6 @@
+{
+	"extends": "stylelint-config-gluons",
+	"processors": [
+		"stylelint-processor-html"
+	]
+}

@@ -1,0 +1,98 @@
+@import './colors.scss';
+
+body {
+	background-color: $bg-color;
+	font-family: 'Libre Baskerville', serif;
+	font-size: 16px;
+	padding: 1em 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+a:not([class]) {
+	color: $link-color;
+	position: relative;
+	text-decoration: none;
+
+	// Link transition from http://tobiasahlin.com/blog/css-trick-animating-link-underlines/
+	&::before {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 2px;
+		bottom: -2px;
+		left: 0;
+		background-color: $link-color;
+		visibility: hidden;
+		transform: scaleX(0);
+		transition: all .3s ease-in-out 0s;
+	}
+
+	&:hover::before {
+		visibility: visible;
+		transform: scaleX(1);
+	}
+}
+
+blockquote {
+	border-left: .25em solid #ddd;
+	box-sizing: border-box;
+	font-size: .93em;
+	margin: 0 0 .5em;
+	padding: .5em 1em;
+	word-wrap: break-word;
+}
+
+.hljs {
+	font-family: 'Fira Mono', monospace;
+	font-size: .9em;
+}
+
+.emoji {
+	font-family: 'Apple Color Emoji', 'Segoe UI', 'Segoe UI Emoji', 'Segoe UI Symbol';
+	vertical-align: text-top;
+	width: 20px;
+	height: 20px;
+}
+
+.gh-button-container {
+	float: none !important;
+	margin: 0 !important;
+}
+
+/*
+ * Credit: CSS Tricks
+ * https://css-tricks.com/examples/hrs/
+ */
+hr {
+	&.divider {
+		padding: 0;
+		border: none;
+		border-top: medium double #333;
+		color: #333;
+		text-align: center;
+		max-height: 0;
+		margin: 2em 0;
+
+		&::after {
+			content: '§';
+			display: inline-block;
+			position: relative;
+			top: -.7em;
+			font-size: 1.5em;
+			padding: 0 .25em;
+			background-color: $bg-color;
+		}
+	}
+	&.gap {
+		border: 0 none transparent;
+		clear: both;
+		height: 1px;
+		margin: 2em 0;
+
+		&.dash {
+			border-bottom: 1px dashed #ccc;
+			background: #999;
+		}
+	}
+}
