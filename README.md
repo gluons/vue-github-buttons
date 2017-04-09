@@ -1,6 +1,6 @@
-# vue-github-buttons-docs
+# Vue GitHub Buttons docs
 
-> A Vue.js project
+> Vue GitHub buttons documentation.
 
 ## Build Setup
 
