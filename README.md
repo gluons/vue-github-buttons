@@ -25,11 +25,15 @@ Via [Yarn](https://yarnpkg.com):
 yarn add vue-github-buttons
 ```
 
+## Demo
+Go to https://gluons.github.io/vue-github-buttons
+
 ## Usage
 
 ```js
 import Vue from 'vue';
-import VueGitHubButtons from 'vue-github-buttons';
+import 'vue-github-buttons/dist/vue-github-buttons.css'; // Stylesheet
+import VueGitHubButtons from 'vue-github-buttons'; // Component plugin
 import App from './App.vue';
 
 Vue.use(VueGitHubButtons, { useCache: true });

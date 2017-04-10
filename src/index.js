@@ -4,10 +4,11 @@ import Fork from './components/Fork.vue';
 import Watch from './components/Watch.vue';
 import Follow from './components/Follow.vue';
 
+ES6Promise.polyfill();
+
 import 'unfetch/polyfill';
 import './scss/main.scss';
 
-ES6Promise.polyfill();
 
 export default {
 	install(Vue, options = { useCache: true }) {

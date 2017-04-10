@@ -83,9 +83,10 @@
 a.social-count {
 	background-color: #fff;
 	border-bottom-right-radius: 3px;
-	border-left: 0;
 	border-top-right-radius: 3px;
-	border: 1px solid rgba(27, 31, 35, 0.2);
+	@each $direction in top, right, bottom {
+		border-#{$direction}: 1px solid rgba(27, 31, 35, .2)
+	}
 	color: #24292e;
 	float: left;
 	font-size: 12px;
