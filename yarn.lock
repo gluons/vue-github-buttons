@@ -4446,7 +4446,7 @@ right-align@^0.1.1:
   dependencies:
     align-text "^0.1.1"
 
-rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.0, rimraf@^2.6.1:
+rimraf@2, rimraf@^2.2.8, rimraf@^2.5.1, rimraf@^2.6.1:
   version "2.6.1"
   resolved "https://registry.yarnpkg.com/rimraf/-/rimraf-2.6.1.tgz#c2338ec643df7a1b7fe5c54fa86f57428a55f33d"
   dependencies:
@@ -5127,9 +5127,9 @@ void-elements@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/void-elements/-/void-elements-2.0.1.tgz#c066afb582bb1cb4128d60ea92392e94d5e9dbec"
 
-vue-github-buttons@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/vue-github-buttons/-/vue-github-buttons-1.0.0.tgz#8755a9bf0df273cf75ba8c3c38044befae4a87df"
+vue-github-buttons@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/vue-github-buttons/-/vue-github-buttons-1.0.1.tgz#62bfe3ea8d58c7595cd8731fe68db64207b47867"
   dependencies:
     es6-promise "^4.1.0"
     format-thousands "^1.1.0"
