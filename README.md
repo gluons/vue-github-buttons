@@ -55,9 +55,11 @@ new Vue({
 </template>
 
 <script>
+// JavaScript ...
 </script>
 
 <style>
+/* Style ... */
 </style>
 ```
 
