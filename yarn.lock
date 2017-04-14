@@ -4774,9 +4774,9 @@ stylehacks@^2.3.2:
     text-table "^0.2.0"
     write-file-stdout "0.0.2"
 
-stylelint-config-gluons@^1.0.2:
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/stylelint-config-gluons/-/stylelint-config-gluons-1.0.2.tgz#99aa074883bf8ecaa92a1c2ec18a79e47dac90ba"
+stylelint-config-gluons@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/stylelint-config-gluons/-/stylelint-config-gluons-1.0.3.tgz#043cf459a7b2625cdc4fcace742fe87a24af6921"
   dependencies:
     stylelint-config-standard "^16.0.0"
 

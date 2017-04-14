@@ -49,7 +49,7 @@ export default {
 		.octo-arm {
 			animation: octocat-wave 560ms ease-in-out;
 		}
-		@media (max-width:500px) {
+		@media (max-width: 500px) {
 			&:hover .octo-arm {
 				animation: none;
 			}

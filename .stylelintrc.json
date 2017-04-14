@@ -1,6 +1,3 @@
 {
-	"extends": "stylelint-config-gluons",
-	"processors": [
-		"stylelint-processor-html"
-	]
+	"extends": "stylelint-config-gluons/vue"
 }
