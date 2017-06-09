@@ -37,7 +37,8 @@
     "build:umd.unmin": "vbuild -c vbuild.component.js --format umd",
     "build:umd.min": "vbuild -c vbuild.component.minimize.js --format umd",
     "example": "vbuild -c vbuild.example.js -d -o",
-    "deploy": "vbuild -c vbuild.example.js && gh-pages -d dist-example"
+    "deploy": "vbuild -c vbuild.example.js && gh-pages -d dist-example",
+    "prepublishOnly": "npm run build:cjs"
   },
   "peerDependencies": {
     "vue": "2.x"
