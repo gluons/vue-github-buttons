@@ -1,10 +1,4 @@
 {
 	"parser": "babel-eslint",
-	"parserOptions": {
-		"sourceType": "module"
-	},
-	"extends": "gluons",
-	"plugins": [
-		"html"
-	]
+	"extends": "gluons/vue"
 }
