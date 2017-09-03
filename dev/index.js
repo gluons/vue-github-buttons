@@ -1,5 +1,5 @@
 import Vue from 'vue';
-import VueGitHubButtons from '../src';
+import VueGitHubButtons from '@/index';
 import App from './App.vue';
 
 Vue.use(VueGitHubButtons);
