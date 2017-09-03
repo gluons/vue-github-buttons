@@ -2,7 +2,7 @@ const camelCase = require('camelcase');
 const fsp = require('fs-promise');
 const path = require('path');
 const octicons = require('octicons');
-const extractOcticonPath = require('../../lib/utils').extractOcticonPath;
+const extractOcticonPath = require('./utils').extractOcticonPath;
 
 const iconsName = require('./icons-name.json').icons;
 
@@ -31,9 +31,7 @@ let filePath = path.resolve(__dirname, '../index.js');
 		return Promise.resolve();
 	}
 }())
-	.then(() => {
-		return fsp.writeFile(filePath, content);
-	})
+	.then(() => fsp.writeFile(filePath, content))
 	.then(() => {
 		console.log('Resource created.');
 	})
