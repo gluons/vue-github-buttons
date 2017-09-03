@@ -1,12 +1,9 @@
-import ES6Promise from 'es6-promise';
 import Star from './components/Star.vue';
 import Fork from './components/Fork.vue';
 import Watch from './components/Watch.vue';
 import Follow from './components/Follow.vue';
 
-ES6Promise.polyfill();
-
-import 'unfetch/polyfill';
+// Main stylesheet
 import './scss/main.scss';
 
 /**
