@@ -26,7 +26,8 @@
   ],
   "scripts": {
     "dev": "poi",
-    "prebuild": "node ./resource/extractor",
+    "extract": "node ./script/extract-icons",
+    "prebuild": "npm run extract",
     "build": "poi build -c ./poi.build.config.js --format umd --module-name VueGitHubButtons",
     "lint": "eslint --ext .js,.vue .",
     "test": "poi test"
@@ -37,10 +38,11 @@
   "devDependencies": {
     "babel-preset-vue-app": "^1.2.1",
     "camelcase": "^4.1.0",
+    "chalk": "^2.1.0",
     "eslint": "^4.6.0",
     "eslint-config-gluons": "^2.0.2",
     "eslint-plugin-vue": "^2.1.0",
-    "fs-promise": "^2.0.3",
+    "fs-extra": "^4.0.1",
     "jasmine-core": "^2.8.0",
     "karma-firefox-launcher": "^1.0.1",
     "karma-jasmine": "^1.1.0",
@@ -48,6 +50,7 @@
     "karma-mocha-reporter": "^2.2.4",
     "lodash.isnil": "^4.0.0",
     "node-sass": "^4.5.3",
+    "octicons": "^6.0.1",
     "poi": "^9.3.3",
     "poi-preset-karma": "^9.0.1",
     "sass-loader": "^6.0.6",
@@ -56,6 +59,6 @@
   },
   "dependencies": {
     "format-thousands": "^1.1.1",
-    "octicons": "^6.0.1"
+    "svg-to-component": "^1.2.4"
   }
 }
