@@ -10,8 +10,10 @@ describe('Watch', () => {
 			slug: 'gluons/vue-github-buttons',
 			showCount: true
 		},
-		data: {
-			count: 123
+		data() {
+			return {
+				count: 123
+			};
 		}
 	}).$mount();
 

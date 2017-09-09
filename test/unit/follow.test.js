@@ -10,8 +10,10 @@ describe('Follow', () => {
 			user: 'gluons',
 			showCount: true
 		},
-		data: {
-			count: 123
+		data() {
+			return {
+				count: 123
+			};
 		}
 	}).$mount();
 
