@@ -11,7 +11,6 @@ describe('Star', () => {
 			showCount: true
 		}
 	}).$mount();
-	vm.count = 123;
 
 	it('has expected name', () => {
 		expect(vm.$options.name).toEqual('gh-btns-star');
@@ -21,10 +20,15 @@ describe('Star', () => {
 		expect(props.slug).toEqual('gluons/vue-github-buttons');
 		expect(props.showCount).toBe(true);
 	});
-	it('has expected data', () => {
-		let data = vm.$data;
-		let count = data.count;
-		expect(count).toEqual(123);
+	it('has expected data', done => {
+		vm.count = 123;
+		vm.$nextTick(() => {
+			let data = vm.$data;
+			let count = data.count;
+			expect(count).toEqual(123);
+
+			done();
+		});
 	});
 	it('has expected custom values', () => {
 		expect(vm['_vue-github-buttons_useCache']).toBeDefined();
