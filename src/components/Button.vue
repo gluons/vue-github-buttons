@@ -7,9 +7,7 @@
 				:href="fullLink"
 				target="_blank"
 			>
-				<svg class="octicon" :width="icon.width" :height="icon.height" :viewBox="box">
-					<path :d="icon.path"></path>
-				</svg>
+				<component :is="iconComponentName"></component>
 				<slot></slot>
 			</a>
 			<a
@@ -23,9 +21,7 @@
 		</template>
 		<template v-else>
 			<a class="gh-button">
-				<svg class="octicon spin" :width="loadingIcon.width" :height="loadingIcon.height" :viewBox="loadingBox">
-					<path :d="loadingIcon.path"></path>
-				</svg>
+				<sync-icon></sync-icon>
 			</a>
 		</template>
 	</div>
@@ -33,26 +29,24 @@
 
 <script>
 import formatThousands from 'format-thousands';
-import { sync } from '../../resource';
+import { getIconsAsComponent, isset } from '../../lib/utils';
 
 const GH_URL = 'https://github.com';
-let isset = value => (typeof value !== 'undefined') && (value != null) && (value != '');
 
 export default {
 	name: 'gh-btns',
+	components: getIconsAsComponent(),
 	props: {
 		icon: {
-			validator(value) {
-				return isset(value.path) && isset(value.width) && isset(value.height);
-			},
+			type: String,
 			required: true
 		},
-		isLoading: Boolean,
-		count: Number,
 		link: {
 			type: String,
 			required: true
 		},
+		isLoading: Boolean,
+		count: Number,
 		countLink: String
 	},
 	filters: {
@@ -64,34 +58,26 @@ export default {
 			}
 		}
 	},
-	data() {
-		return {
-			loadingIcon: sync
-		};
-	},
 	computed: {
+		iconComponentName() {
+			return `${this.icon}-icon`;
+		},
 		hasCount() {
 			let count = this.count;
 			// Show count when count exist and greater than or equal to 0.
-			return (typeof count !== 'undefined') && (count != null) && (count >= 0);
+			return isset(count) && (count >= 0);
 		},
 		hasCountLink() {
 			let countLink = this.countLink;
-			return (typeof countLink !== 'undefined') && (countLink != null);
-		},
-		loadingBox() {
-			return `0 0 ${this.loadingIcon.width} ${this.loadingIcon.height}`;
-		},
-		box() {
-			return `0 0 ${this.icon.width} ${this.icon.height}`;
+			return isset(countLink);
 		},
 		fullLink() {
 			return `${GH_URL}/${this.link}`;
 		},
 		fullCountLink() {
 			let countLink = this.countLink;
-			if ((typeof countLink !== 'undefined') && (countLink != null)) {
-				return `${GH_URL}/${this.countLink}`;
+			if (this.hasCountLink) {
+				return `${GH_URL}/${countLink}`;
 			} else {
 				return 'javascript:void(0);';
 			}

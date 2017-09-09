@@ -9,6 +9,9 @@ describe('Follow', () => {
 		propsData: {
 			user: 'gluons',
 			showCount: true
+		},
+		data: {
+			count: 123
 		}
 	}).$mount();
 
@@ -22,10 +25,8 @@ describe('Follow', () => {
 	});
 	it('has expected data', () => {
 		let data = vm.$data;
-		let icon = data.icon;
-		expect(icon.path).toBeTruthy();
-		expect(icon.width).toBeTruthy();
-		expect(icon.height).toBeTruthy();
+		let count = data.count;
+		expect(count).toEqual(123);
 	});
 	it('has expected custom values', () => {
 		expect(vm['_vue-github-buttons_useCache']).toBeDefined();

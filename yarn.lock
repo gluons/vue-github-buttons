@@ -6124,6 +6124,13 @@ svg-tags@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/svg-tags/-/svg-tags-1.0.0.tgz#58f71cee3bd519b59d4b2a843b6c7de64ac04764"
 
+svg-to-component-loader@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/svg-to-component-loader/-/svg-to-component-loader-0.1.1.tgz#2b4710f238651b2d100fadff360235a90cd25c4e"
+  dependencies:
+    loader-utils "^1.1.0"
+    svg-to-component "^1.2.4"
+
 svg-to-component@^1.2.4:
   version "1.2.4"
   resolved "https://registry.yarnpkg.com/svg-to-component/-/svg-to-component-1.2.4.tgz#ce28e6687220aa35d815cbe4006b497c16ca2e6f"

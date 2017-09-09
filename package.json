@@ -54,11 +54,11 @@
     "poi": "^9.3.3",
     "poi-preset-karma": "^9.0.1",
     "sass-loader": "^6.0.6",
+    "svg-to-component-loader": "^0.1.1",
     "vue": "^2.4.2",
     "webpack": "^3.5.5"
   },
   "dependencies": {
-    "format-thousands": "^1.1.1",
-    "svg-to-component": "^1.2.4"
+    "format-thousands": "^1.1.1"
   }
 }
