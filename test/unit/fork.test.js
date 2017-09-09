@@ -9,13 +9,9 @@ describe('Fork', () => {
 		propsData: {
 			slug: 'gluons/vue-github-buttons',
 			showCount: true
-		},
-		data() {
-			return {
-				count: 123
-			};
 		}
 	}).$mount();
+	vm.count = 123;
 
 	it('has expected name', () => {
 		expect(vm.$options.name).toEqual('gh-btns-fork');

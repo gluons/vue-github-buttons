@@ -9,13 +9,9 @@ describe('Follow', () => {
 		propsData: {
 			user: 'gluons',
 			showCount: true
-		},
-		data() {
-			return {
-				count: 123
-			};
 		}
 	}).$mount();
+	vm.count = 123;
 
 	it('has expected name', () => {
 		expect(vm.$options.name).toEqual('gh-btns-follow');
