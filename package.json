@@ -75,6 +75,7 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "format-thousands": "^1.1.1"
   }
 }
