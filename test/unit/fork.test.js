@@ -20,12 +20,15 @@ describe('Fork', () => {
 		expect(props.slug).toEqual('gluons/vue-github-buttons');
 		expect(props.showCount).toBe(true);
 	});
-	it('has expected data', () => {
-		let data = vm.$data;
-		let icon = data.icon;
-		expect(icon.path).toBeTruthy();
-		expect(icon.width).toBeTruthy();
-		expect(icon.height).toBeTruthy();
+	it('has expected data', done => {
+		vm.count = 123;
+		vm.$nextTick(() => {
+			let data = vm.$data;
+			let count = data.count;
+			expect(count).toEqual(123);
+
+			done();
+		});
 	});
 	it('has expected custom values', () => {
 		expect(vm['_vue-github-buttons_useCache']).toBeDefined();

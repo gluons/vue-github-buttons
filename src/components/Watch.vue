@@ -1,6 +1,6 @@
 <template>
 	<gh-button
-		:icon="icon"
+		icon="eye"
 		:is-loading="isLoading"
 		:link="`${slug}/subscription`"
 		:count="count"
@@ -12,8 +12,7 @@
 
 <script>
 import Button from './Button.vue';
-import { eye } from '../../resource';
-import { ghGet } from '../../lib/utils.js';
+import { ghGet } from '../../lib/utils';
 
 export default {
 	name: 'gh-btns-watch',
@@ -22,7 +21,6 @@ export default {
 	},
 	data() {
 		return {
-			icon: eye,
 			count: null
 		};
 	},

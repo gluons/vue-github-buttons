@@ -1,6 +1,6 @@
 <template>
 	<gh-button
-		:icon="icon"
+		icon="mark-github"
 		:is-loading="isLoading"
 		:link="user"
 		:count="count"
@@ -12,8 +12,7 @@
 
 <script>
 import Button from './Button.vue';
-import { markGithub } from '../../resource';
-import { ghGet } from '../../lib/utils.js';
+import { ghGet } from '../../lib/utils';
 
 export default {
 	name: 'gh-btns-follow',
@@ -22,7 +21,6 @@ export default {
 	},
 	data() {
 		return {
-			icon: markGithub,
 			count: null
 		};
 	},

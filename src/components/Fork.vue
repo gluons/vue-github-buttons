@@ -1,6 +1,6 @@
 <template>
 	<gh-button
-		:icon="icon"
+		icon="repo-forked"
 		:is-loading="isLoading"
 		:link="`${slug}/fork`"
 		:count="count"
@@ -12,8 +12,7 @@
 
 <script>
 import Button from './Button.vue';
-import { repoForked } from '../../resource';
-import { ghGet } from '../../lib/utils.js';
+import { ghGet } from '../../lib/utils';
 
 export default {
 	name: 'gh-btns-fork',
@@ -22,7 +21,6 @@ export default {
 	},
 	data() {
 		return {
-			icon: repoForked,
 			count: null
 		};
 	},
