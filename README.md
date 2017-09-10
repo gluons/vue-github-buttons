@@ -1,4 +1,5 @@
 # Vue GitHub Buttons
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/bc0ed4e4a9ef4734ae741d0f8a5d358d)](https://www.codacy.com/app/gluons/vue-github-buttons?utm_source=github.com&utm_medium=referral&utm_content=gluons/vue-github-buttons&utm_campaign=badger)
 [![license](https://img.shields.io/github/license/gluons/vue-github-buttons.svg?style=flat-square)](https://github.com/gluons/vue-github-buttons/blob/master/LICENSE)
 [![vue 2](https://img.shields.io/badge/vue-2-42b983.svg?style=flat-square)](https://vuejs.org)
 [![npm](https://img.shields.io/npm/v/vue-github-buttons.svg?style=flat-square)](https://www.npmjs.com/package/vue-github-buttons)
