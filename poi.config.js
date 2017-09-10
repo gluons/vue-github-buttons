@@ -31,6 +31,10 @@ module.exports = {
 		'GH_TOKEN': !isNil(token) ? `?access_token=${token}` : ''
 	},
 	presets: [
+		require('poi-preset-resolve-alias')({
+			'@lib': './lib',
+			'@rs': './resource'
+		}),
 		require('poi-preset-karma')({
 			frameworks: ['jasmine'],
 			browsers: [

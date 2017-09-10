@@ -29,7 +29,7 @@
 
 <script>
 import formatThousands from 'format-thousands';
-import { getIconsAsComponent, isset } from '../../lib/utils';
+import { getIconsAsComponent, isset } from '@lib/utils';
 
 const GH_URL = 'https://github.com';
 

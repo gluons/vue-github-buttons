@@ -5084,6 +5084,10 @@ poi-preset-karma@^9.0.1:
     karma-webpack "^2.0.4"
     mocha "^3.5.0"
 
+poi-preset-resolve-alias@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/poi-preset-resolve-alias/-/poi-preset-resolve-alias-1.0.1.tgz#c89de0ee5ecfafc0843ebd274e761685f4ed61b0"
+
 poi@^9.3.3:
   version "9.3.5"
   resolved "https://registry.yarnpkg.com/poi/-/poi-9.3.5.tgz#eb6a00579162ebd0b2d725eed9bf1c5a7ff81c54"

@@ -12,7 +12,7 @@
 
 <script>
 import Button from './Button.vue';
-import { ghGet } from '../../lib/utils';
+import { ghGet } from '@lib/utils';
 
 export default {
 	name: 'gh-btns-fork',

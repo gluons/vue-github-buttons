@@ -64,6 +64,14 @@ function getConfig(esm = false, minimize = false) {
 				}
 			]
 		},
+		resolve: {
+			alias: {
+				'@': path.resolve(__dirname, './src'),
+				'vue$': 'vue/dist/vue.esm.js',
+				'@lib': path.resolve(__dirname, './lib'),
+				'@rs': path.resolve(__dirname, './resource')
+			}
+		},
 		plugins: [
 			new webpack.DefinePlugin({
 				'process.env': {
