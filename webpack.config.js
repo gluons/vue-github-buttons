@@ -4,6 +4,10 @@ const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
+const createStyleLoaders = require('./build/createStyleLoaders');
+const defineVars = require('./build/defineVars');
+const S = JSON.stringify; // Alias
+
 const MODULE_NAME = 'vue-github-buttons';
 
 /**
@@ -45,53 +49,11 @@ function getConfig(esm = false, minimize = false) {
 				},
 				{
 					test: /\.css$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
-						use: [
-							{
-								loader: 'css-loader',
-								options: {
-									minimize,
-									sourceMap: true,
-									importLoaders: 1
-								}
-							},
-							{
-								loader: 'postcss-loader',
-								options: {
-									sourceMap: true
-								}
-							}
-						]
-					})
+					use: createStyleLoaders(['css', 'postcss'], minimize)
 				},
 				{
 					test: /\.scss$/,
-					use: ExtractTextPlugin.extract({
-						fallback: 'style-loader',
-						use: [
-							{
-								loader: 'css-loader',
-								options: {
-									minimize,
-									sourceMap: true,
-									importLoaders: 2
-								}
-							},
-							{
-								loader: 'postcss-loader',
-								options: {
-									sourceMap: true
-								}
-							},
-							{
-								loader: 'sass-loader',
-								options: {
-									sourceMap: true
-								}
-							}
-						]
-					})
+					use: createStyleLoaders(['css', 'postcss', 'scss'], minimize)
 				},
 				{
 					test: /\.vue.svg$/,
@@ -105,10 +67,10 @@ function getConfig(esm = false, minimize = false) {
 		plugins: [
 			new webpack.DefinePlugin({
 				'process.env': {
-					'NODE_ENV': JSON.stringify('production')
+					'NODE_ENV': S('production')
 				},
-				'GH_ROOT_URL': JSON.stringify('https://api.github.com'),
-				'GH_TOKEN': JSON.stringify('')
+				'GH_ROOT_URL': S(defineVars['GH_ROOT_URL']),
+				'GH_TOKEN': S(defineVars['GH_TOKEN'])
 			}),
 			new ExtractTextPlugin(`${MODULE_NAME}${cssSuffix}.css`),
 			...(

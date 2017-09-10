@@ -1,4 +1,5 @@
 const isNil = require('lodash.isnil');
+const defineVars = require('./build/defineVars');
 
 const token = process.env.GITHUB_DEV_TOKEN;
 
@@ -8,6 +9,7 @@ module.exports = {
 		config.module
 			// Remove Poi's default loader for SVG
 			.rules.delete('svg').end()
+
 			// Use SVG to component loader instead
 			.rule('svg-vue')
 			.test(/\.vue.svg$/)
@@ -16,6 +18,7 @@ module.exports = {
 			.options({
 				type: 'vue'
 			});
+
 		config
 			.performance.hints(false);
 	},
@@ -24,7 +27,7 @@ module.exports = {
 		title: 'Vue GitHub Buttons'
 	},
 	define: {
-		'GH_ROOT_URL': 'https://api.github.com',
+		'GH_ROOT_URL': defineVars['GH_ROOT_URL'],
 		'GH_TOKEN': !isNil(token) ? `?access_token=${token}` : ''
 	},
 	presets: [
