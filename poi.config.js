@@ -1,4 +1,4 @@
-const isNil = require('lodash.isnil');
+const nvl = require('nvl');
 const defineVars = require('./build/defineVars');
 
 const token = process.env.GITHUB_DEV_TOKEN;
@@ -28,7 +28,7 @@ module.exports = {
 	},
 	define: {
 		'GH_ROOT_URL': defineVars['GH_ROOT_URL'],
-		'GH_TOKEN': !isNil(token) ? `?access_token=${token}` : ''
+		'GH_TOKEN': nvl(token, '')
 	},
 	presets: [
 		require('poi-preset-resolve-alias')({

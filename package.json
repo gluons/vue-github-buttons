@@ -2,7 +2,7 @@
   "name": "vue-github-buttons",
   "description": "GitHub buttons component for Vue.",
   "version": "1.0.3",
-  "main": "dist/vue-github-buttons.js",
+  "main": "dist/vue-github-buttons.common.js",
   "module": "dist/vue-github-buttons.esm.js",
   "unpkg": "dist/vue-github-buttons.min.js",
   "style": "dist/vue-github-buttons.css",
@@ -57,9 +57,9 @@
     "karma-jasmine": "^1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
     "karma-mocha-reporter": "^2.2.4",
-    "lodash.isnil": "^4.0.0",
     "node-sass": "^4.5.3",
     "npm-run-all": "^4.1.1",
+    "nvl": "^1.0.1",
     "octicons": "^6.0.1",
     "poi": "^9.3.3",
     "poi-preset-karma": "^9.0.1",
@@ -75,6 +75,7 @@
     "webpack": "^3.5.5"
   },
   "dependencies": {
+    "axios": "^0.16.2",
     "format-thousands": "^1.1.1"
   }
 }
