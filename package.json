@@ -4,7 +4,7 @@
   "version": "1.0.3",
   "main": "dist/vue-github-buttons.common.js",
   "module": "dist/vue-github-buttons.esm.js",
-  "unpkg": "dist/vue-github-buttons.min.js",
+  "browser": "dist/vue-github-buttons.min.js",
   "style": "dist/vue-github-buttons.css",
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "Apache-2.0",
