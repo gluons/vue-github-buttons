@@ -62,7 +62,7 @@
     "nvl": "^1.0.1",
     "octicons": "^6.0.1",
     "poi": "^9.3.3",
-    "poi-preset-karma": "^9.0.1",
+    "poi-preset-karma": "^9.0.3",
     "poi-preset-resolve-alias": "^1.0.1",
     "postcss-loader": "^2.0.6",
     "rimraf": "^2.6.1",
