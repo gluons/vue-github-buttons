@@ -4,8 +4,8 @@
 [![npm](https://img.shields.io/npm/v/vue-github-buttons.svg?style=flat-square)](https://www.npmjs.com/package/vue-github-buttons)
 [![npm](https://img.shields.io/npm/dt/vue-github-buttons.svg?style=flat-square)](https://www.npmjs.com/package/vue-github-buttons)
 [![Travis](https://img.shields.io/travis/gluons/vue-github-buttons.svg?style=flat-square)](https://travis-ci.org/gluons/vue-github-buttons)
-[![Codacy grade](https://img.shields.io/codacy/grade/bc0ed4e4a9ef4734ae741d0f8a5d358d.svg?style=flat-square)](https://www.codacy.com/app/gluons/vue-github-buttons)
 [![Dependency Status](https://dependencyci.com/github/gluons/vue-github-buttons/badge?style=flat-square)](https://dependencyci.com/github/gluons/vue-github-buttons)
+[![Codacy grade](https://img.shields.io/codacy/grade/bc0ed4e4a9ef4734ae741d0f8a5d358d.svg?style=flat-square)](https://www.codacy.com/app/gluons/vue-github-buttons)
 [![ESLint Gluons](https://img.shields.io/badge/code%20style-gluons-9C27B0.svg?style=flat-square)](https://github.com/gluons/eslint-config-gluons)
 
 :octocat: GitHub buttons component for Vue.
@@ -31,13 +31,15 @@ Go to https://gluons.github.io/vue-github-buttons
 
 ## Usage
 
-```js
+```javascript
 import Vue from 'vue';
-import 'vue-github-buttons/dist/vue-github-buttons.css'; // Stylesheet
-import VueGitHubButtons from 'vue-github-buttons'; // Component plugin
+import VueGitHubButtons from 'vue-github-buttons';
 import App from './App.vue';
 
-Vue.use(VueGitHubButtons, { useCache: true });
+// Stylesheet
+import 'vue-github-buttons/dist/vue-github-buttons.css';
+
+Vue.use(VueGitHubButtons);
 
 new Vue({
 	el: '#app',
@@ -68,9 +70,16 @@ new Vue({
 
 ### Plugin Option
 
-#### `useCache`  
+#### `useCache`
+Type: `Boolean`  
+Default: `true`
+
 Enable count number caching. (Use [session storage](https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage))
 > GitHub API has [limited requests](https://developer.github.com/v3/#rate-limiting). So, caching may be useful when user refresh the webpage.
+
+```javascript
+Vue.use(VueGitHubButtons, { useCache: false }); // Disable cache
+```
 
 ### Components
 
