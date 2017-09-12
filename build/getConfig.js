@@ -27,6 +27,7 @@ function getConfig(type = 'web', minimize = false) {
 		case 'web':
 			config.output.library = libraryName;
 			config.output.libraryTarget = 'this';
+			config.output.libraryExport = 'default';
 			config.output.filename = `${fileName}${suffix}.js`;
 			break;
 		default:
