@@ -12,12 +12,20 @@
 
 <script>
 import Button from './Button.vue';
-import { ghGet } from '@lib/utils';
+import getCountMixin from '@/mixins/getCount';
 
 export default {
 	name: 'gh-btns-follow',
 	components: {
 		'gh-button': Button
+	},
+	mixins: [getCountMixin],
+	props: {
+		user: {
+			type: String,
+			required: true
+		},
+		showCount: Boolean
 	},
 	data() {
 		return {
@@ -33,37 +41,18 @@ export default {
 			}
 		}
 	},
-	props: {
-		user: {
-			type: String,
-			required: true
-		},
-		showCount: Boolean
-	},
-	created() {
+	async created() {
 		if (this.showCount) {
 			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			ghGet(`/users/${this.user}`, useCache).then(
-				res => {
-					this.count = parseInt(res['followers']);
-				},
-				() => {
-					this.count = -1; // Don't show count when error.
-				}
-			);
+			let requestPath = `/users/${this.user}`;
+			this.count = await this.getCount(requestPath, 'followers', useCache);
 		}
 	},
-	updated() {
+	async updated() {
 		if (this.showCount) {
 			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			ghGet(`/users/${this.user}`, useCache).then(
-				res => {
-					this.count = parseInt(res['followers']);
-				},
-				() => {
-					this.count = -1; // Don't show count when error.
-				}
-			);
+			let requestPath = `/users/${this.user}`;
+			this.count = await this.getCount(requestPath, 'followers', useCache);
 		}
 	}
 };

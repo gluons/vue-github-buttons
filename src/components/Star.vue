@@ -12,12 +12,20 @@
 
 <script>
 import Button from './Button.vue';
-import { ghGet } from '@lib/utils';
+import getCountMixin from '@/mixins/getCount';
 
 export default {
 	name: 'gh-btns-star',
 	components: {
 		'gh-button': Button
+	},
+	mixins: [getCountMixin],
+	props: {
+		slug: {
+			type: String,
+			required: true
+		},
+		showCount: Boolean
 	},
 	data() {
 		return {
@@ -33,37 +41,18 @@ export default {
 			}
 		}
 	},
-	props: {
-		slug: {
-			type: String,
-			required: true
-		},
-		showCount: Boolean
-	},
-	created() {
+	async created() {
 		if (this.showCount) {
 			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			ghGet(`/repos/${this.slug}`, useCache).then(
-				res => {
-					this.count = parseInt(res['stargazers_count']);
-				},
-				() => {
-					this.count = -1; // Don't show count when error.
-				}
-			);
+			let requestPath = `/repos/${this.slug}`;
+			this.count = await this.getCount(requestPath, 'stargazers_count', useCache);
 		}
 	},
-	updated() {
+	async updated() {
 		if (this.showCount) {
 			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			ghGet(`/repos/${this.slug}`, useCache).then(
-				res => {
-					this.count = parseInt(res['stargazers_count']);
-				},
-				() => {
-					this.count = -1; // Don't show count when error.
-				}
-			);
+			let requestPath = `/repos/${this.slug}`;
+			this.count = await this.getCount(requestPath, 'stargazers_count', useCache);
 		}
 	}
 };
