@@ -27,6 +27,10 @@ function install(Vue, options = { useCache: true }) {
 	Vue.component('gh-btns-follow', Follow);
 }
 
+if ((typeof window !== 'undefined') && window.Vue) {
+	install(window.Vue);
+}
+
 export default {
 	install
 };
