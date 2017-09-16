@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const MinifyPlugin = require('babel-minify-webpack-plugin');
 
+const banner = require('./banner');
 const createStyleLoaders = require('./createStyleLoaders');
 const defineVars = require('./defineVars');
 const S = JSON.stringify; // Alias
@@ -69,7 +70,8 @@ function getBaseConfig(minimize = false) {
 					]
 					:
 					[]
-			)
+			),
+			new webpack.BannerPlugin(banner)
 		],
 		devtool: 'source-map',
 		stats: {
