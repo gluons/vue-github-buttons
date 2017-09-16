@@ -33,7 +33,8 @@
     "prebuild": "run-s extract clean",
     "build": "webpack",
     "lint": "eslint --ext .js,.vue .",
-    "test": "poi test"
+    "test": "poi test",
+    "prepublishOnly": "run-s lint test build"
   },
   "peerDependencies": {
     "vue": "2"
