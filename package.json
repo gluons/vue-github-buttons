@@ -48,7 +48,7 @@
     "camelcase": "^4.1.0",
     "chalk": "^2.1.0",
     "css-loader": "^0.28.7",
-    "eslint": "^4.6.0",
+    "eslint": "~4.6.0",
     "eslint-config-gluons": "^2.0.2",
     "eslint-plugin-vue": "^2.1.0",
     "extract-text-webpack-plugin": "^3.0.0",

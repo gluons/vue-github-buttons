@@ -44,9 +44,13 @@ acorn@^4.0.3:
   version "4.0.4"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-4.0.4.tgz#17a8d6a7a6c4ef538b814ec9abac2779293bf30a"
 
-acorn@^5.0.0, acorn@^5.1.1:
+acorn@^5.0.0:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.1.tgz#53fe161111f912ab999ee887a90a0bc52822fd75"
+
+acorn@^5.1.1:
+  version "5.1.2"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.1.2.tgz#911cb53e036807cf0fa778dc5d370fbd864246d7"
 
 address@^1.0.1:
   version "1.0.3"
@@ -65,8 +69,8 @@ ajv-keywords@^2.0.0:
   resolved "https://registry.yarnpkg.com/ajv-keywords/-/ajv-keywords-2.1.0.tgz#a296e17f7bfae7c1ce4f7e0de53d29cb32162df0"
 
 ajv@^4.7.0:
-  version "4.11.5"
-  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.5.tgz#b6ee74657b993a01dce44b7944d56f485828d5bd"
+  version "4.11.8"
+  resolved "https://registry.yarnpkg.com/ajv/-/ajv-4.11.8.tgz#82ffb02b29e662ae53bdc20af15947706739c536"
   dependencies:
     co "^4.6.0"
     json-stable-stringify "^1.0.1"
@@ -1626,8 +1630,8 @@ cipher-base@^1.0.0, cipher-base@^1.0.1:
     inherits "^2.0.1"
 
 circular-json@^0.3.1:
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.1.tgz#be8b36aefccde8b3ca7aa2d6afc07a37242c0d2d"
+  version "0.3.3"
+  resolved "https://registry.yarnpkg.com/circular-json/-/circular-json-0.3.3.tgz#815c99ea84f6809529d2f45791bdf82711352d66"
 
 clap@^1.0.9:
   version "1.2.0"
@@ -1652,8 +1656,8 @@ cli-cursor@^2.1.0:
     restore-cursor "^2.0.0"
 
 cli-width@^2.0.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.1.0.tgz#b234ca209b29ef66fc518d9b98d5847b00edf00a"
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/cli-width/-/cli-width-2.2.0.tgz#ff19ede8a9a5e579324147b0c11f0fbcbabed639"
 
 clipboardy@^1.1.2:
   version "1.1.4"
@@ -2626,19 +2630,19 @@ eslint-scope@^3.7.1:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-eslint@^4.6.0:
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.7.0.tgz#d35fc07c472520be3de85b3da11e99c576afd515"
+eslint@~4.6.0:
+  version "4.6.1"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-4.6.1.tgz#ddc7fc7fd70bf93205b0b3449bb16a1e9e7d4950"
   dependencies:
     ajv "^5.2.0"
     babel-code-frame "^6.22.0"
     chalk "^2.1.0"
     concat-stream "^1.6.0"
     cross-spawn "^5.1.0"
-    debug "^3.0.1"
+    debug "^2.6.8"
     doctrine "^2.0.0"
     eslint-scope "^3.7.1"
-    espree "^3.5.1"
+    espree "^3.5.0"
     esquery "^1.0.0"
     estraverse "^4.2.0"
     esutils "^2.0.2"
@@ -2659,7 +2663,7 @@ eslint@^4.6.0:
     natural-compare "^1.4.0"
     optionator "^0.8.2"
     path-is-inside "^1.0.2"
-    pluralize "^7.0.0"
+    pluralize "^4.0.0"
     progress "^2.0.0"
     require-uncached "^1.0.3"
     semver "^5.3.0"
@@ -2668,7 +2672,7 @@ eslint@^4.6.0:
     table "^4.0.1"
     text-table "~0.2.0"
 
-espree@^3.5.1:
+espree@^3.5.0:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/espree/-/espree-3.5.1.tgz#0c988b8ab46db53100a1954ae4ba995ddd27d87e"
   dependencies:
@@ -3511,7 +3515,11 @@ iconv-lite@0.4.15:
   version "0.4.15"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.15.tgz#fe265a218ac6a57cfe854927e9d04c19825eddeb"
 
-iconv-lite@^0.4.17, iconv-lite@~0.4.13:
+iconv-lite@^0.4.17:
+  version "0.4.19"
+  resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.19.tgz#f7468f60135f5e5dad3399c0a81be9a1603a082b"
+
+iconv-lite@~0.4.13:
   version "0.4.18"
   resolved "https://registry.yarnpkg.com/iconv-lite/-/iconv-lite-0.4.18.tgz#23d8656b16aae6742ac29732ea8f0336a4789cf2"
 
@@ -3932,14 +3940,14 @@ js-tokens@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-3.0.2.tgz#9866df395102130e38f7f996bceb65443209c25b"
 
-js-yaml@3.x:
+js-yaml@3.x, js-yaml@^3.9.1:
   version "3.10.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.10.0.tgz#2e78441646bd4682e963f22b6e92823c309c62dc"
   dependencies:
     argparse "^1.0.7"
     esprima "^4.0.0"
 
-js-yaml@^3.4.3, js-yaml@^3.9.1:
+js-yaml@^3.4.3:
   version "3.9.1"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.9.1.tgz#08775cebdfdd359209f0d2acd383c8f86a6904a0"
   dependencies:
@@ -5157,9 +5165,9 @@ pkg-dir@^2.0.0:
   dependencies:
     find-up "^2.1.0"
 
-pluralize@^7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
+pluralize@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-4.0.0.tgz#59b708c1c0190a2f692f1c7618c446b052fd1762"
 
 poi-dev-utils@^1.0.1:
   version "1.0.1"
@@ -5775,7 +5783,7 @@ readable-stream@1.0, readable-stream@~1.0.2:
     isarray "0.0.1"
     string_decoder "~0.10.x"
 
-"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.1.0, readable-stream@^2.2.2:
+"readable-stream@^2.0.0 || ^1.1.13", readable-stream@^2.0.1, readable-stream@^2.0.2, readable-stream@^2.0.5, readable-stream@^2.1.0:
   version "2.2.6"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.2.6.tgz#8b43aed76e71483938d12a8d46c6cf1a00b1f816"
   dependencies:
@@ -5787,7 +5795,7 @@ readable-stream@1.0, readable-stream@~1.0.2:
     string_decoder "~0.10.x"
     util-deprecate "~1.0.1"
 
-readable-stream@^2.2.9:
+readable-stream@^2.2.2, readable-stream@^2.2.9:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-2.3.3.tgz#368f2512d79f9d46fdfc71349ae7878bbc1eb95c"
   dependencies:
