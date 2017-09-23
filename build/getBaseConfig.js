@@ -26,7 +26,8 @@ function getBaseConfig(minimize = false) {
 					test: /\.vue$/,
 					loader: 'vue-loader',
 					options: {
-						extractCSS: true
+						extractCSS: true,
+						optimizeSSR: false
 					}
 				},
 				{
