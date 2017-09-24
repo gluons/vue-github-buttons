@@ -1,7 +1,7 @@
 {
   "name": "vue-github-buttons",
   "description": "GitHub buttons component for Vue.",
-  "version": "2.0.4",
+  "version": "2.0.5",
   "main": "dist/vue-github-buttons.common.js",
   "module": "dist/vue-github-buttons.esm.js",
   "unpkg": "dist/vue-github-buttons.min.js",
