@@ -31,6 +31,11 @@ function getBaseConfig(minimize = false) {
 					}
 				},
 				{
+					test: /\.js$/,
+					exclude: /node_modules/,
+					loader: 'babel-loader'
+				},
+				{
 					test: /\.css$/,
 					use: createStyleLoaders(['css', 'postcss'], minimize)
 				},
@@ -50,9 +55,9 @@ function getBaseConfig(minimize = false) {
 		resolve: {
 			alias: {
 				'@': path.resolve(__dirname, '../src'),
-				'vue$': 'vue/dist/vue.esm.js',
 				'@lib': path.resolve(__dirname, '../lib'),
-				'@rs': path.resolve(__dirname, '../resource')
+				'@rs': path.resolve(__dirname, '../resource'),
+				'vue$': 'vue/dist/vue.esm.js'
 			}
 		},
 		plugins: [
