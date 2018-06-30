@@ -1,7 +1,6 @@
 {
 	"root": true,
-	"extends": "gluons/vue",
-	"parser": "babel-eslint",
+	"extends": "gluons/vue-babel",
 	"env": {
 		"jasmine": true
 	}
