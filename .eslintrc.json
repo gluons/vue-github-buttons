@@ -1,6 +1,9 @@
 {
 	"root": true,
 	"extends": "gluons/vue-babel",
+	"rules": {
+		"vue/script-indent": "off"
+	},
 	"env": {
 		"jasmine": true
 	}
