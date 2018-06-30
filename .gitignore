@@ -106,3 +106,6 @@ $RECYCLE.BIN/
 
 # Dist
 dist/
+
+# Extracted icons
+src/components/icons/

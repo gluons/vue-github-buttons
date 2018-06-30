@@ -29,7 +29,7 @@
   ],
   "scripts": {
     "dev": "poi",
-    "extract": "node ./script/extract-icons",
+    "extract": "node ./script/extractIcons",
     "clean": "rimraf ./dist/*",
     "prebuild": "run-s extract clean",
     "build": "webpack",
@@ -65,6 +65,7 @@
     "npm-run-all": "^4.1.1",
     "nvl": "^1.0.1",
     "octicons": "^7.3.0",
+    "pascal-case": "^2.0.1",
     "poi": "^9.3.3",
     "poi-preset-karma": "^9.0.3",
     "poi-preset-resolve-alias": "^1.0.1",
