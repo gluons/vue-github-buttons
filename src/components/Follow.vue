@@ -1,10 +1,10 @@
 <template>
 	<gh-button
-		icon="mark-github"
 		:is-loading="isLoading"
 		:link="user"
 		:count="count"
 		:count-link="`${user}/followers`"
+		icon="mark-github"
 	>
 		Follow
 	</gh-button>
@@ -15,7 +15,7 @@ import Button from './Button.vue';
 import getCountMixin from '@/mixins/getCount';
 
 export default {
-	name: 'gh-btns-follow',
+	name: 'GitHubButtonFollow',
 	components: {
 		'gh-button': Button
 	},
@@ -25,7 +25,10 @@ export default {
 			type: String,
 			required: true
 		},
-		showCount: Boolean
+		showCount: {
+			type: Boolean,
+			default: false
+		}
 	},
 	data() {
 		return {

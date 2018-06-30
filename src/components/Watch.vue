@@ -1,10 +1,10 @@
 <template>
 	<gh-button
-		icon="eye"
 		:is-loading="isLoading"
 		:link="`${slug}/subscription`"
 		:count="count"
 		:count-link="`${slug}/watchers`"
+		icon="eye"
 	>
 		Watch
 	</gh-button>
@@ -15,7 +15,7 @@ import Button from './Button.vue';
 import getCountMixin from '@/mixins/getCount';
 
 export default {
-	name: 'gh-btns-watch',
+	name: 'GitHubButtonWatch',
 	components: {
 		'gh-button': Button
 	},
@@ -25,7 +25,10 @@ export default {
 			type: String,
 			required: true
 		},
-		showCount: Boolean
+		showCount: {
+			type: Boolean,
+			default: false
+		}
 	},
 	data() {
 		return {
