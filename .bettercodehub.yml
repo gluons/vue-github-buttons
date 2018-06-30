@@ -1,6 +1,0 @@
-languages:
-  - javascript
-exclude:
-  - /build/.*
-  - /poi\.config\.js
-  - /webpack\.config\.js
