@@ -5,6 +5,6 @@
 		"vue/script-indent": "off"
 	},
 	"env": {
-		"jasmine": true
+		"mocha": true
 	}
 }
