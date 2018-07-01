@@ -45,10 +45,7 @@ module.exports = {
 	},
 	resolve: {
 		extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
-		alias: {
-			'@': resolve(__dirname, './src'),
-			'@lib': resolve(__dirname, './lib')
-		}
+		alias: require('./alias')
 	},
 	plugins: [
 		new VueLoaderPlugin(),
