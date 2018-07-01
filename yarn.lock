@@ -78,9 +78,9 @@
     lodash "^4.2.0"
     to-fast-properties "^2.0.0"
 
-"@gluons/vue-pack-alias-plugin@^0.1.0":
-  version "0.1.0"
-  resolved "https://registry.yarnpkg.com/@gluons/vue-pack-alias-plugin/-/vue-pack-alias-plugin-0.1.0.tgz#25a5cff1ab3c060b36058546d8eac69eb112a741"
+"@gluons/vue-pack-alias-plugin@^0.1.1":
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/@gluons/vue-pack-alias-plugin/-/vue-pack-alias-plugin-0.1.1.tgz#314d0207c84af9d81f9fba84c7dfa32b1a518524"
 
 "@gluons/vue-pack-cli@^0.1.0":
   version "0.1.0"
