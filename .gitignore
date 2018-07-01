@@ -109,3 +109,6 @@ dist/
 
 # Extracted icons
 src/components/icons/
+
+# Nuxt built files
+.nuxt
