@@ -2,11 +2,10 @@
   "name": "vue-github-buttons",
   "description": "GitHub buttons component for Vue.",
   "version": "2.0.5",
-  "main": "dist/vue-github-buttons.common.js",
-  "module": "dist/vue-github-buttons.esm.js",
-  "unpkg": "dist/vue-github-buttons.min.js",
-  "jsdelivr": "dist/vue-github-buttons.min.js",
-  "style": "dist/vue-github-buttons.css",
+  "main": "./dist/vue-github-buttons.cjs.js",
+  "module": "./dist/vue-github-buttons.es.js",
+  "unpkg": "./dist/vue-github-buttons.web.min.js",
+  "jsdelivr": "./dist/vue-github-buttons.web.min.js",
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "Apache-2.0",
   "repository": {
@@ -30,9 +29,8 @@
   "scripts": {
     "dev": "webpack-dev-server",
     "extract": "node ./script/extractIcons",
-    "clean": "rimraf ./dist/*",
-    "prebuild": "run-s extract clean",
-    "build": "webpack",
+    "prebuild": "npm run extract",
+    "build": "vue-pack",
     "lint": "eslint --ext .js,.vue .",
     "test": "poi test",
     "prepublishOnly": "run-s lint test build"
@@ -41,6 +39,9 @@
     "vue": "2"
   },
   "devDependencies": {
+    "@gluons/vue-pack": "^0.1.0",
+    "@gluons/vue-pack-alias-plugin": "^0.1.0",
+    "@gluons/vue-pack-cli": "^0.1.0",
     "babel-eslint": "^8.0.0",
     "chalk": "^2.1.0",
     "css-loader": "^0.28.7",
@@ -63,7 +64,6 @@
     "pug": "^2.0.3",
     "pug-loader": "^2.4.0",
     "pug-plain-loader": "^1.0.0",
-    "rimraf": "^2.6.1",
     "sass-loader": "^7.0.3",
     "vue": "^2.5.16",
     "vue-loader": "^15.2.4",
