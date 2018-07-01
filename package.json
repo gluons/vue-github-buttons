@@ -32,6 +32,7 @@
     "prebuild": "npm run extract",
     "build": "vue-pack",
     "lint": "eslint --ext .js,.vue .",
+    "pretest": "npm run extract",
     "test": "karma start",
     "prepublishOnly": "run-s lint test build"
   },
