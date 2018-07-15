@@ -13,6 +13,6 @@
   "dependencies": {
     "nuxt": "^1.4.1",
     "vue": "^2.5.16",
-    "vue-github-buttons": "^2.0.5"
+    "vue-github-buttons": "file:../../"
   }
 }
