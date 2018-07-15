@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import VueGitHubButtons from '../../../dist/vue-github-buttons.es';
+import VueGitHubButtons from 'vue-github-buttons';
 
 import Home from './Home.vue';
 
-import '../../../dist/vue-github-buttons.css';
+import 'vue-github-buttons/dist/vue-github-buttons.css';
 
 Vue.use(VueGitHubButtons);
 

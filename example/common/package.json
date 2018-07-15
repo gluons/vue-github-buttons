@@ -10,7 +10,8 @@
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "vue": "^2.5.16"
+    "vue": "^2.5.16",
+    "vue-github-buttons": "file:../../"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
