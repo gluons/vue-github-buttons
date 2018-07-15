@@ -19,7 +19,7 @@
 			- [`useCache`](#usecache)
 	- [API](#api)
 		- [Plugin Option](#plugin-option)
-			- [`useCache`](#usecache)
+			- [`useCache`](#usecache-1)
 		- [Components](#components)
 			- [`gh-btns-watch`](#gh-btns-watch)
 			- [`gh-btns-star`](#gh-btns-star)
