@@ -1,4 +1,3 @@
-const { resolve } = require('path');
 const nvl = require('nvl');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
