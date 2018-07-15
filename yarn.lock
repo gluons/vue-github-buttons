@@ -4937,9 +4937,9 @@ obuf@^1.0.0, obuf@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/obuf/-/obuf-1.1.2.tgz#09bea3343d41859ebd446292d11c9d4db619084e"
 
-octicons@^7.3.0:
-  version "7.4.0"
-  resolved "https://registry.yarnpkg.com/octicons/-/octicons-7.4.0.tgz#0be0082ed75b81e680800ef978bf47078b670091"
+octicons@^8.0.0:
+  version "8.0.0"
+  resolved "https://registry.yarnpkg.com/octicons/-/octicons-8.0.0.tgz#4f8263f984a1b265d507f7b9851e249d87593b20"
   dependencies:
     object-assign "^4.1.1"
 
