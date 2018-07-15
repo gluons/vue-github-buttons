@@ -1,5 +1,5 @@
 module.exports = {
-	plugins: [
-		'~/plugins/vue-github-buttons'
+	modules: [
+		'vue-github-buttons/nuxt'
 	]
 };

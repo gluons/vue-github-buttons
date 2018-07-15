@@ -9,6 +9,23 @@
 
 :octocat: GitHub buttons component for Vue.
 
+- [Vue GitHub Buttons](#vue-github-buttons)
+	- [Installation](#installation)
+	- [Demo](#demo)
+	- [Usage](#usage)
+	- [Using with Nuxt](#using-with-nuxt)
+		- [Module options](#module-options)
+			- [`css`](#css)
+			- [`useCache`](#usecache)
+	- [API](#api)
+		- [Plugin Option](#plugin-option)
+			- [`useCache`](#usecache)
+		- [Components](#components)
+			- [`gh-btns-watch`](#gh-btns-watch)
+			- [`gh-btns-star`](#gh-btns-star)
+			- [`gh-btns-fork`](#gh-btns-fork)
+		- [`gh-btns-follow`](#gh-btns-follow)
+
 ## Installation
 
 Via [NPM](https://www.npmjs.com):
@@ -39,6 +56,8 @@ import App from './App.vue';
 import 'vue-github-buttons/dist/vue-github-buttons.css';
 
 Vue.use(VueGitHubButtons);
+// Or if your don't want to use cache
+Vue.use(VueGitHubButtons, { useCache: false });
 
 new Vue({
 	el: '#app',
@@ -64,6 +83,37 @@ new Vue({
 /* Style ... */
 </style>
 ```
+
+## Using with [Nuxt](https://nuxtjs.org/)
+
+Add `vue-github-buttons/nuxt` to `modules` in **nuxt.config.js**.
+
+```javascript
+module.exports = {
+	modules: [
+		'vue-github-buttons/nuxt',
+		// Or with options
+		['vue-github-buttons/nuxt', {
+			css: false, // Don't include CSS
+			useCache: false // Don't use cache
+		}]
+	]
+};
+```
+
+### Module options
+
+#### `css`
+Type: `Boolean`  
+Default: `true`
+
+Include **Vue GitHub Buttons**'s CSS.
+
+#### `useCache`
+Type: `Boolean`  
+Default: `true`
+
+Enable caching. (See below)
 
 ## API
 
