@@ -24,7 +24,7 @@
 			- [`gh-btns-watch`](#gh-btns-watch)
 			- [`gh-btns-star`](#gh-btns-star)
 			- [`gh-btns-fork`](#gh-btns-fork)
-		- [`gh-btns-follow`](#gh-btns-follow)
+			- [`gh-btns-follow`](#gh-btns-follow)
 
 ## Installation
 
@@ -147,7 +147,7 @@ Vue.use(VueGitHubButtons, { useCache: false }); // Disable cache
 - `slug` - GitHub slug (username/repo).
 - `show-count` - Enable displaying the count number.
 
-### `gh-btns-follow`
+#### `gh-btns-follow`
 👤 A follow button.
 - `user` - GitHub username.
 - `show-count` - Enable displaying the count number.
