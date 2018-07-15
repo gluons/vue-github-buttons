@@ -1,0 +1,26 @@
+<template>
+	<div id="home">
+		<gh-btns-watch
+			slug="vuejs/vue"
+			show-count
+		/>
+		<gh-btns-star
+			slug="vuejs/vue"
+			show-count
+		/>
+		<gh-btns-fork
+			slug="vuejs/vue"
+			show-count
+		/>
+		<gh-btns-follow
+			user="yyx990803"
+			show-count
+		/>
+	</div>
+</template>
+
+<script>
+export default {
+	name: 'Home'
+};
+</script>
