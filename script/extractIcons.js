@@ -1,24 +1,37 @@
 const chalk = require('chalk');
-const fs = require('fs-extra');
+const {
+	existsSync,
+	removeSync,
+	ensureDirSync,
+	writeFile
+} = require('fs-extra');
 const octicons = require('octicons');
-const path = require('path');
+const { join, resolve } = require('path');
+
+const makeComponent = require('./makeComponent');
 
 const { green, red } = chalk;
 const iconsName = require('./icons-name.json').icons;
-const iconDestPath = path.join(__dirname, '../resource/icons');
+const iconDestPath = resolve(__dirname, '../src/components/icons');
 
 // Clean old icons
-if (fs.existsSync(iconDestPath)) {
-	fs.removeSync(iconDestPath);
+if (existsSync(iconDestPath)) {
+	removeSync(iconDestPath);
 }
-fs.ensureDirSync(iconDestPath);
+ensureDirSync(iconDestPath);
 
 let fileIconPromises = iconsName.map(iconName => {
 	let icon = octicons[iconName];
+
 	// If it's sync icon, add spin class.
 	let options = (iconName == 'sync') ? { class: 'spin' } : {};
+
 	let iconSVG = icon.toSVG(options);
-	return fs.writeFile(path.resolve(iconDestPath, `${iconName}.vue.svg`), iconSVG, 'utf8');
+	let iconComponent = makeComponent(`${iconName}Icon`, iconSVG);
+	let iconFileName = `${iconName}-icon.vue`;
+	let iconComponentPath = join(iconDestPath, iconFileName);
+
+	return writeFile(iconComponentPath, iconComponent, 'utf8');
 });
 
 Promise.all(fileIconPromises)

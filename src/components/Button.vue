@@ -2,26 +2,26 @@
 	<div class="gh-button-container">
 		<template v-if="!isLoading">
 			<a
-				class="gh-button"
 				:class="{ 'with-count': hasCount }"
 				:href="fullLink"
+				class="gh-button"
 				target="_blank"
 			>
-				<component :is="iconComponentName"></component>
-				<slot></slot>
+				<component :is="iconComponentName" />
+				<slot />
 			</a>
 			<a
-				class="social-count"
+				v-if="hasCount"
 				:href="fullCountLink"
 				:target="hasCountLink ? '_blank' : null"
-				v-if="hasCount"
+				class="social-count"
 			>
 				{{ count | formatNumber }}
 			</a>
 		</template>
 		<template v-else>
 			<a class="gh-button">
-				<sync-icon></sync-icon>
+				<sync-icon />
 			</a>
 		</template>
 	</div>
@@ -29,13 +29,23 @@
 
 <script>
 import formatThousands from 'format-thousands';
-import { getIconsAsComponent, isset } from '@lib/utils';
+import { isset } from '@lib/utils';
+import getIconComponents from '@/getIconComponents';
 
 const GH_URL = 'https://github.com';
 
 export default {
-	name: 'gh-btns',
-	components: getIconsAsComponent(),
+	name: 'GitHubButton',
+	components: getIconComponents(),
+	filters: {
+		formatNumber(value) {
+			if ((typeof value !== 'undefined') && (value != null)) {
+				return formatThousands(value, ',');
+			} else {
+				return value;
+			}
+		}
+	},
 	props: {
 		icon: {
 			type: String,
@@ -45,17 +55,17 @@ export default {
 			type: String,
 			required: true
 		},
-		isLoading: Boolean,
-		count: Number,
-		countLink: String
-	},
-	filters: {
-		formatNumber(value) {
-			if ((typeof value !== 'undefined') && (value != null)) {
-				return formatThousands(value, ',');
-			} else {
-				return value;
-			}
+		isLoading: {
+			type: Boolean,
+			default: false
+		},
+		count: {
+			type: Number,
+			default: 0
+		},
+		countLink: {
+			type: String,
+			default: ''
 		}
 	},
 	computed: {

@@ -1,8 +1,10 @@
 {
 	"root": true,
-	"extends": "gluons/vue",
-	"parser": "babel-eslint",
+	"extends": "gluons/vue-babel",
+	"rules": {
+		"vue/script-indent": "off"
+	},
 	"env": {
-		"jasmine": true
+		"mocha": true
 	}
 }

@@ -1,2 +1,4 @@
+src/components/icons/
 dist-example/
 dist/
+nuxt/plugin.js

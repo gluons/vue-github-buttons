@@ -1,10 +1,10 @@
 <template>
 	<gh-button
-		icon="repo-forked"
 		:is-loading="isLoading"
 		:link="`${slug}/fork`"
 		:count="count"
 		:count-link="`${slug}/network`"
+		icon="repo-forked"
 	>
 		Fork
 	</gh-button>
@@ -15,7 +15,7 @@ import Button from './Button.vue';
 import getCountMixin from '@/mixins/getCount';
 
 export default {
-	name: 'gh-btns-fork',
+	name: 'GitHubButtonFork',
 	components: {
 		'gh-button': Button
 	},
@@ -25,7 +25,10 @@ export default {
 			type: String,
 			required: true
 		},
-		showCount: Boolean
+		showCount: {
+			type: Boolean,
+			default: false
+		}
 	},
 	data() {
 		return {

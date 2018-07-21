@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="home">
 		<gh-btns-watch
 			slug="vuejs/vue"
 			show-count
@@ -18,3 +18,9 @@
 		/>
 	</div>
 </template>
+
+<script>
+export default {
+	name: 'Home'
+};
+</script>
