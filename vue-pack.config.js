@@ -6,7 +6,7 @@ module.exports = {
 	libraryName: 'VueGitHubButtons',
 	fileName: 'vue-github-buttons',
 	define: {
-		'GH_TOKEN': JSON.stringify('')
+		'GH_TOKEN': ''
 	},
 	plugins: [
 		alias(require('./alias'))
