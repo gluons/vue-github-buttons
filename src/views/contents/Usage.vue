@@ -5,6 +5,29 @@
 		include ../usage-codes/main.js
 	highlight-code(lang='html')
 		include:escape-html ../usage-codes/component.vue
+	hr.gap
+	h2 Using with #[blank-link(url='https://nuxtjs.org/') Nuxt]
+	p.with-code Add #[highlight-code(inline) vue-github-buttons/nuxt] to #[highlight-code(inline) modules] in #[strong nuxt.config.js].
+	highlight-code(lang='js').
+		module.exports = {
+			modules: [
+				'vue-github-buttons/nuxt',
+				// Or with options
+				['vue-github-buttons/nuxt', {
+					css: false, // Don't include CSS
+					useCache: false // Don't use cache
+				}]
+			]
+		};
+	h3 Module options
+	h4: highlight-code(inline) css
+	p Type: #[highlight-code(lang='javascript', inline) Boolean]
+	p Default: #[highlight-code(lang='javascript', inline) true]
+	p Include #[strong Vue GitHub Buttons]'s CSS.
+	h4: highlight-code(inline) useCache
+	p Type: #[highlight-code(lang='javascript', inline) Boolean]
+	p Default: #[highlight-code(lang='javascript', inline) true]
+	p Enable caching. (See below)
 </template>
 
 <script>
@@ -15,3 +38,9 @@ export default {
 	components
 };
 </script>
+
+<style scoped>
+p.with-code {
+	line-height: 2rem;
+}
+</style>
