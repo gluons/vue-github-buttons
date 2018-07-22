@@ -13,7 +13,7 @@
 import components from '../../components';
 
 export default {
-	name: 'installation',
+	name: 'Installation',
 	components
 };
 </script>

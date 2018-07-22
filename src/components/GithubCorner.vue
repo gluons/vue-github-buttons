@@ -17,7 +17,7 @@ a(:href="url", target="_blank").github-corner
 
 <script>
 export default {
-	name: 'github-corner',
+	name: 'GithubCorner',
 	props: {
 		url: {
 			type: String,
