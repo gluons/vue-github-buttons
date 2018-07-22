@@ -5,7 +5,7 @@
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
+    "build": "cross-env NODE_ENV=production vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
@@ -20,6 +20,7 @@
     "@vue/cli-service": "^3.0.0-rc.5",
     "babel-eslint": "^8.2.6",
     "browserslist-config-vue": "^1.0.3",
+    "cross-env": "^5.2.0",
     "eslint": "4",
     "eslint-config-gluons": "^4.0.0",
     "jstransformer-escape-html": "^1.1.0",
