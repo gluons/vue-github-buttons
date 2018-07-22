@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "dependencies": {
     "vue": "^2.5.16",
-    "vue-github-buttons": "file:../.."
+    "vue-github-buttons": "^2.1.0"
   },
   "devDependencies": {
     "css-loader": "^1.0.0",
