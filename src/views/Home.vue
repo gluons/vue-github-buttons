@@ -26,7 +26,7 @@ import components from '../components';
 import contents from './contents';
 
 export default {
-	name: 'home',
+	name: 'Home',
 	components: {
 		...components,
 		...contents
@@ -54,6 +54,9 @@ export default {
 		.gh-button-container {
 			margin: 0 1em !important;
 		}
+	}
+	.emoji.octocat {
+		margin-right: 5px;
 	}
 }
 </style>

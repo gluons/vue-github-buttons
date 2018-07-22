@@ -1,6 +1,5 @@
 <template lang="pug">
 #app
-	github-corner(url='https://github.com/gluons/vue-github-buttons')
 	home
 </template>
 
@@ -9,6 +8,7 @@ import components from './components';
 import views from './views';
 
 export default {
+	name: 'App',
 	components: {
 		...components,
 		...views

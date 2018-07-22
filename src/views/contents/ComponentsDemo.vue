@@ -27,7 +27,7 @@
 import components from '../../components';
 
 export default {
-	name: 'components-demo',
+	name: 'ComponentsDemo',
 	components
 };
 </script>

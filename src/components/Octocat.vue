@@ -4,7 +4,7 @@ span.emoji.octocat(src='../assets/octocat.png', width='20', height='20', align='
 
 <script>
 export default {
-	name: 'octocat'
+	name: 'Octocat'
 };
 </script>
 

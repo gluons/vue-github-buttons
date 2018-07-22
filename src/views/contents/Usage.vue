@@ -11,7 +11,7 @@
 import components from '../../components';
 
 export default {
-	name: 'usage',
+	name: 'Usage',
 	components
 };
 </script>

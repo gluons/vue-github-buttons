@@ -40,7 +40,7 @@
 import components from '../../components';
 
 export default {
-	name: 'api',
+	name: 'API',
 	components
 };
 </script>

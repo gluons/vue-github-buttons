@@ -5,7 +5,7 @@ a(:href='url', target='_blank', rel='noopener noreferrer')
 
 <script>
 export default {
-	name: 'blank-link',
+	name: 'BlankLink',
 	props: {
 		url: {
 			type: String,
