@@ -1,5 +1,6 @@
 <template lang="pug">
 #app
+	github-corners(repo='gluons/vue-github-buttons')
 	home
 </template>
 
