@@ -24,7 +24,8 @@
     "buttons"
   ],
   "files": [
-    "dist"
+    "dist",
+    "nuxt"
   ],
   "scripts": {
     "dev": "webpack-dev-server",
