@@ -1,0 +1,13 @@
+language: node_js
+node_js:
+  - "lts/*"
+script:
+  - yarn lint
+  - yarn build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  on:
+    branch: docs
+local_dir: ./dist/
