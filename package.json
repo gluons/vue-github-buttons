@@ -34,7 +34,7 @@
     "lint": "eslint --ext .js,.vue .",
     "pretest": "npm run extract",
     "test": "karma start",
-    "prepublishOnly": "run-s lint test build"
+    "prepublishOnly": "run-s lint \"test --single-run\" build"
   },
   "peerDependencies": {
     "vue": "2"
