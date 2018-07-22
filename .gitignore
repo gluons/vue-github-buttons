@@ -112,3 +112,6 @@ src/components/icons/
 
 # Nuxt built files
 .nuxt
+
+# Example Yarn lock file
+example/*/yarn.lock
