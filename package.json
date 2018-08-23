@@ -41,7 +41,7 @@
     "vue": "2"
   },
   "devDependencies": {
-    "@gluons/vue-pack-cli": "^1.2.6",
+    "@gluons/vue-pack-cli": "^1.2.7",
     "@vue/test-utils": "^1.0.0-beta.24",
     "babel-eslint": "^8.0.0",
     "chai": "^4.1.2",
@@ -70,7 +70,7 @@
     "vue": "^2.5.17",
     "vue-loader": "^15.4.0",
     "vue-template-compiler": "^2.5.17",
-    "webpack": "^4.17.0"
+    "webpack": "^4.17.1"
   },
   "dependencies": {
     "axios": "^0.18.0",
