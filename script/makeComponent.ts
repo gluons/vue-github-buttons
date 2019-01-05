@@ -1,13 +1,17 @@
-const pascalCase = require('pascal-case');
+import pascalCase from 'pascal-case';
 
 /**
  * Make Vue component from SVG.
  *
+ * @export
  * @param {string} name Component name
  * @param {string} svgContent SVG content
  * @returns {string}
  */
-module.exports = (name, svgContent) => {
+export default function makeComponent(
+	name: string,
+	svgContent: string
+): string {
 	const componentName = pascalCase(name);
 
 	return `
@@ -15,11 +19,13 @@ module.exports = (name, svgContent) => {
 	${svgContent}
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { Vue, Component } from 'vue-property-decorator';
+
+@Component({
 	name: '${componentName}'
-};
+})
+export default class ${componentName} extends Vue {}
 </script>
 `.trim();
-
-};
+}

@@ -10,53 +10,45 @@
 	</gh-button>
 </template>
 
-<script>
-import Button from './Button.vue';
-import getCountMixin from '@/mixins/getCount';
+<script lang="ts">
+import { Component, Prop, Mixins } from 'vue-property-decorator';
 
-export default {
+import Button from './Button.vue';
+import getCountMixin from '../mixins/getCount';
+
+@Component({
 	name: 'GitHubButtonFollow',
 	components: {
 		'gh-button': Button
-	},
-	mixins: [getCountMixin],
-	props: {
-		user: {
-			type: String,
-			required: true
-		},
-		showCount: {
-			type: Boolean,
-			default: false
-		}
-	},
-	data() {
-		return {
-			count: null
-		};
-	},
-	computed: {
-		isLoading() {
-			if (this.showCount) {
-				return this.count == null;
-			} else {
-				return false;
-			}
-		}
-	},
-	async created() {
+	}
+})
+export default class GitHubButtonFollow extends Mixins(getCountMixin) {
+	@Prop({ type: String, required: true }) user: string;
+	@Prop({ type: Boolean, default: false }) showCount: boolean;
+
+	count: number = null;
+
+	get isLoading(): boolean {
 		if (this.showCount) {
-			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			let requestPath = `/users/${this.user}`;
-			this.count = await this.getCount(requestPath, 'followers', useCache);
+			return this.count == null;
+		} else {
+			return false;
 		}
-	},
-	async updated() {
+	}
+
+	async loadCount() {
 		if (this.showCount) {
-			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			let requestPath = `/users/${this.user}`;
+			const useCache = this['_vue-github-buttons_useCache'] ? true : false;
+			const requestPath = `/users/${this.user}`;
 			this.count = await this.getCount(requestPath, 'followers', useCache);
 		}
 	}
-};
+
+	async created() {
+		await this.loadCount();
+	}
+	async updated() {
+		await this.loadCount();
+	}
+}
 </script>
