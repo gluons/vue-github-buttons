@@ -28,8 +28,9 @@
     "nuxt"
   ],
   "scripts": {
-    "dev": "vue-pack dev",
     "extract": "ts-node ./script/extractIcons.ts",
+    "predev": "npm run extract",
+    "dev": "vue-pack dev",
     "prebuild": "npm run extract",
     "build": "vue-pack",
     "lint": "eslint --ext .js,.vue .",

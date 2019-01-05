@@ -6,5 +6,8 @@
 			"es2015"
 		],
 		"experimentalDecorators": true
-	}
+	},
+	"include": [
+		"src"
+	]
 }
