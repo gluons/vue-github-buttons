@@ -82,7 +82,7 @@
     "webpack": "^4.17.1"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "format-thousands": "^1.1.1"
+    "format-thousands": "^1.1.1",
+    "ky": "^0.5.2"
   }
 }

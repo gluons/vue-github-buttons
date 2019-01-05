@@ -1,18 +1,17 @@
-import axios from 'axios';
+import ky from 'ky';
 
 import { GH_ROOT_URL } from '../lib/constants';
 
-const requestHeaders: Record<string, string> = {
+const requestHeaders = new Headers({
 	Accept: 'application/vnd.github.v3+json'
-};
+});
 
 if (GH_TOKEN) {
-	// tslint:disable-next-line:no-string-literal
-	requestHeaders['Authorization'] = `token ${GH_TOKEN}`;
+	requestHeaders.set('Authorization', `token ${GH_TOKEN}`);
 }
 
-const instance = axios.create({
-	baseURL: GH_ROOT_URL,
+const api = ky.extend({
+	prefixUrl: GH_ROOT_URL,
 	headers: requestHeaders
 });
 
@@ -30,14 +29,13 @@ export default async function sendGhRequest(
 	path: string,
 	middleware: Middleware = () => {}
 ): Promise<any> {
-	const res = await instance.get(path);
-
-	if (res.status === 200) {
-		const data = res.data;
-		middleware(data);
-
-		return data;
-	} else {
-		throw new Error(`Error: ${res.statusText}`);
+	if (path.charAt(0) === '/') {
+		path = path.substring(1);
 	}
+
+	const data = await api.get(path).json();
+
+	middleware(data);
+
+	return data;
 }
