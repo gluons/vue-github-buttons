@@ -7,21 +7,21 @@ export type RepoAction = (slug: string, data?: any) => void;
 export type UserAction = (username: string, data?: any) => void;
 
 /**
- * Path action determiner.
+ * Path action executor.
  *
  * @export
- * @class PathActionDeterminer
+ * @class PathActionExecutor
  */
-export default class PathActionDeterminer {
+export default class PathActionExecutor {
 	private path: string;
 	private repoAction: RepoAction;
 	private userAction: UserAction;
 
 	/**
-	 * Creates an instance of PathActionDeterminer.
+	 * Creates an instance of `PathActionExecutor`.
 	 *
 	 * @param {string} path GitHub API relative path
-	 * @memberof PathActionDeterminer
+	 * @memberof PathActionExecutor
 	 */
 	constructor(path: string) {
 		this.path = path;
@@ -32,7 +32,7 @@ export default class PathActionDeterminer {
 	 *
 	 * @param {RepoAction} action An action
 	 * @returns {this}
-	 * @memberof PathActionDeterminer
+	 * @memberof PathActionExecutor
 	 */
 	repo(action: RepoAction): this {
 		this.repoAction = action;
@@ -44,7 +44,7 @@ export default class PathActionDeterminer {
 	 *
 	 * @param {UserAction} action An action
 	 * @returns {this}
-	 * @memberof PathActionDeterminer
+	 * @memberof PathActionExecutor
 	 */
 	user(action: UserAction): this {
 		this.userAction = action;
@@ -54,19 +54,19 @@ export default class PathActionDeterminer {
 	/**
 	 * Clear actions.
 	 *
-	 * @memberof PathActionDeterminer
+	 * @memberof PathActionExecutor
 	 */
 	clear(): void {
 		this.repoAction = () => {};
 		this.userAction = () => {};
 	}
 	/**
-	 * Determine an action to call.
+	 * Execute an appropriate action.
 	 *
-	 * @param {*} [payload] Payload
-	 * @memberof PathActionDeterminer
+	 * @param {any} [payload] Payload
+	 * @memberof PathActionExecutor
 	 */
-	determine(payload?: any): void {
+	execute(payload?: any): void {
 		const { path, repoAction, userAction } = this;
 
 		if (isRepoPath(path)) {

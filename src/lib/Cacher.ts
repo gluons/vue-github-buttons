@@ -54,7 +54,7 @@ export default class Cacher {
 	};
 
 	/**
-	 * Creates an instance of Cacher.
+	 * Creates an instance of `Cacher`.
 	 *
 	 * @param {boolean} [autoCommit=true] Automatically commit cache to session storage
 	 * @memberof Cacher

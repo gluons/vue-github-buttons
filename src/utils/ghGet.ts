@@ -1,5 +1,5 @@
 import Cacher from '../lib/cacher';
-import PathActionDeterminer from '../lib/PathActionDeterminer';
+import PathActionExecutor from '../lib/PathActionExecutor';
 import sendGhRequest from './sendGhRequest';
 
 /**
@@ -19,7 +19,7 @@ export default async function ghGet(
 		let retrievedData: any = null;
 
 		// Retrieval
-		const retrievalDeterminer = new PathActionDeterminer(path)
+		const retrievalExecutor = new PathActionExecutor(path)
 			.repo(slug => {
 				retrievedData = cacher.getRepo(slug);
 			})
@@ -27,18 +27,19 @@ export default async function ghGet(
 				retrievedData = cacher.getUser(username);
 			});
 		// Caching
-		const cachingDeterminer = new PathActionDeterminer(path)
+		const cachingExecutor = new PathActionExecutor(path)
 			.repo((slug, data) => {
 				cacher.setRepo(slug, data);
 			})
 			.user((username, data) => {
 				cacher.setUser(username, data);
 			});
+
 		const cacherMiddleware = (data: any) => {
-			cachingDeterminer.determine(data);
+			cachingExecutor.execute(data);
 		};
 
-		retrievalDeterminer.determine();
+		retrievalExecutor.execute();
 
 		if (retrievedData) {
 			return retrievedData;
