@@ -3951,11 +3951,6 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   resolved "https://registry.npmjs.org/kind-of/-/kind-of-6.0.2.tgz#01146b36a6218e64e58f3a8d66de5d7fc6f6d051"
   integrity sha512-s5kLOcnH0XqDO+FvuaLX8DDjZ18CGFk7VygH40QoKPUQhW4e2rvM0rwUq0t8IQDOwYSeLK01U90OjzBTme2QqA==
 
-ky@^0.5.2:
-  version "0.5.2"
-  resolved "https://registry.npmjs.org/ky/-/ky-0.5.2.tgz#744c74d7ff624cce1bd478817692df1ee8df5275"
-  integrity sha512-TVoPpFZ/maGy9XyEh8u1a7VYf1zdZxSRtkGHOSm2AmlRtCEmH9jE3vHaKyV/G/zCYhOA+DHN1c/b3b543mRFlw==
-
 lazy-cache@^1.0.3:
   version "1.0.4"
   resolved "https://registry.npmjs.org/lazy-cache/-/lazy-cache-1.0.4.tgz#a1d78fc3a50474cb80845d3b3b6e1da49a446e8e"

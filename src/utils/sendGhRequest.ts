@@ -1,19 +1,13 @@
-import ky from 'ky';
-
 import { GH_ROOT_URL } from '../lib/constants';
 
-const requestHeaders = new Headers({
+const requestHeaders: Record<string, string> = {
 	Accept: 'application/vnd.github.v3+json'
-});
+};
 
 if (GH_TOKEN) {
-	requestHeaders.set('Authorization', `token ${GH_TOKEN}`);
+	// tslint:disable-next-line:no-string-literal
+	requestHeaders['Authorization'] = `token ${GH_TOKEN}`;
 }
-
-const api = ky.extend({
-	prefixUrl: GH_ROOT_URL,
-	headers: requestHeaders
-});
 
 export type Middleware = (data: any) => void;
 
@@ -29,13 +23,30 @@ export default async function sendGhRequest(
 	path: string,
 	middleware: Middleware = () => {}
 ): Promise<any> {
-	if (path.charAt(0) === '/') {
-		path = path.substring(1);
+	if (path.charAt(0) !== '/') {
+		path = `/${path}`;
 	}
 
-	const data = await api.get(path).json();
+	const fullUrl = `${GH_ROOT_URL}${path}`;
+	const res = await fetch(fullUrl, {
+		method: 'GET',
+		headers: requestHeaders,
+		cache: 'no-store',
+		redirect: 'follow'
+	});
 
-	middleware(data);
+	if (res.ok) {
+		const data = await res.json();
+		middleware(data);
 
-	return data;
+		return data;
+	} else {
+		let errorMsg: string = `${res.status}`;
+
+		if (res.statusText) {
+			errorMsg += ` - ${res.statusText}`;
+		}
+
+		throw new Error(`GitHub request error: ${errorMsg}`);
+	}
 }

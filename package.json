@@ -82,7 +82,6 @@
     "webpack": "^4.17.1"
   },
   "dependencies": {
-    "format-thousands": "^1.1.1",
-    "ky": "^0.5.2"
+    "format-thousands": "^1.1.1"
   }
 }
