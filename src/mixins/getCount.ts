@@ -22,7 +22,9 @@ export default class GetCountMixin extends Vue {
 			const res = await ghGet(path, useCache);
 
 			return parseInt(res[key], 10);
-		} catch (_) {
+		} catch (err) {
+			console.error(err);
+
 			/*
 			 * Do not show count number when error.
 			 * Set it to -1 to hide count number.
