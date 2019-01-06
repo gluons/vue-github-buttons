@@ -1,6 +1,7 @@
 import chalk from 'chalk';
 import { ensureDirSync, existsSync, removeSync, writeFile } from 'fs-extra';
 import octicons from 'octicons';
+import pascalCase from 'pascal-case';
 import { join, resolve } from 'path';
 
 import makeComponent from './makeComponent';
@@ -19,11 +20,12 @@ const fileIconPromises = iconsName.map(iconName => {
 	const icon = octicons[iconName];
 
 	// If it's sync icon, add spin class.
-	const options = (iconName === 'sync') ? { class: 'spin' } : {};
+	const options = iconName === 'sync' ? { class: 'spin' } : {};
 
 	const iconSVG = icon.toSVG(options);
-	const iconComponent = makeComponent(`${iconName}Icon`, iconSVG);
-	const iconFileName = `${iconName}-icon.vue`;
+	const iconComponentName = pascalCase(`${iconName}Icon`);
+	const iconComponent = makeComponent(iconComponentName, iconSVG);
+	const iconFileName = `${iconComponentName}.vue`;
 	const iconComponentPath = join(iconDestPath, iconFileName);
 
 	return writeFile(iconComponentPath, iconComponent, 'utf8');

@@ -1,8 +1,8 @@
-import EyeIcon from './components/icons/eye-icon.vue';
-import MarkGithubIcon from './components/icons/mark-github-icon.vue';
-import RepoForkedIcon from './components/icons/repo-forked-icon.vue';
-import StarIcon from './components/icons/star-icon.vue';
-import SyncIcon from './components/icons/sync-icon.vue';
+import EyeIcon from './components/icons/EyeIcon.vue';
+import MarkGithubIcon from './components/icons/MarkGithubIcon.vue';
+import RepoForkedIcon from './components/icons/RepoForkedIcon.vue';
+import StarIcon from './components/icons/StarIcon.vue';
+import SyncIcon from './components/icons/SyncIcon.vue';
 
 /**
  * Get all SVG icons as component.
