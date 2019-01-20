@@ -28,11 +28,11 @@
     "nuxt"
   ],
   "scripts": {
-    "extract": "ts-node ./script/extractIcons.ts",
+    "extract": "ts-node -O \"{ \\\"module\\\": \\\"commonjs\\\" }\" ./script/extractIcons.ts",
     "predev": "npm run extract",
-    "dev": "vue-pack dev",
+    "dev": "vue-up dev",
     "prebuild": "npm run extract",
-    "build": "vue-pack",
+    "build": "vue-up",
     "lint": "eslint --ext .js,.vue .",
     "pretest": "npm run extract",
     "test": "karma start",
@@ -43,8 +43,7 @@
   },
   "devDependencies": {
     "@gluons/prettier-config": "^2.0.0",
-    "@gluons/vue-pack": "^1.16.0",
-    "@gluons/vue-pack-cli": "^1.16.0",
+    "@gluons/vue-up": "^0.4.1",
     "@types/fs-extra": "^5.0.4",
     "@types/node": "8",
     "@vue/test-utils": "^1.0.0-beta.24",
