@@ -1,8 +1,0 @@
-src/components/icons/
-dist/
-nuxt/plugin.js
-
-# ESLint only exclude the top-level `node_modules`.
-# Sub-folder have to ignore `node_modules` manually.
-# See https://github.com/eslint/eslint/issues/5646
-example/*/node_modules/
