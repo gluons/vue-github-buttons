@@ -1,8 +1,9 @@
-import { expect } from 'chai';
+/// <reference path='../src/sfc.d.ts'/>
+
 import { createLocalVue, mount } from '@vue/test-utils';
 
-import VueGitHubButtons from '@/index';
-import Follow from '@/components/Follow.vue';
+import VueGitHubButtons from '../src';
+import Follow from '../src/components/Follow.vue';
 
 const localVue = createLocalVue();
 
@@ -16,25 +17,23 @@ describe('Follow', () => {
 			showCount: true
 		}
 	});
-	const vm = wrapper.vm;
+	const vm = wrapper.vm as any;
 
 	it('has expected name', () => {
-		expect(vm.$options.name).to.equal('GitHubButtonFollow');
+		expect(wrapper.name()).toEqual('GitHubButtonFollow');
 	});
 	it('has expected props', () => {
-		let props = vm.$props;
-
-		expect(props.user).to.equal('gluons');
-		expect(props.showCount).to.be.true;
+		expect(wrapper.props('user')).toEqual('gluons');
+		expect(wrapper.props('showCount')).toEqual(true);
 	});
 	it('has expected data', () => {
 		wrapper.setData({
 			count: 123
 		});
 
-		expect(vm.count).to.equal(123);
+		expect(vm.count).toEqual(123);
 	});
 	it('has expected custom values', () => {
-		expect(vm['_vue-github-buttons_useCache']).to.not.be.undefined;
+		expect(vm['_vue-github-buttons_useCache']).toBeDefined();
 	});
 });
