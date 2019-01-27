@@ -54,6 +54,6 @@ module.exports = {
 			GH_TOKEN: JSON.stringify('')
 		})
 	],
-	devtool: 'eval-source-map',
+	devtool: 'inline-source-map',
 	stats: false
 };
