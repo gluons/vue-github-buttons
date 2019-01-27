@@ -33,7 +33,4 @@ describe('Follow', () => {
 
 		expect(vm.count).toEqual(123);
 	});
-	it('has expected custom values', () => {
-		expect(vm['_vue-github-buttons_useCache']).toBeDefined();
-	});
 });

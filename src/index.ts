@@ -4,13 +4,13 @@ import Follow from './components/Follow.vue';
 import Fork from './components/Fork.vue';
 import Star from './components/Star.vue';
 import Watch from './components/Watch.vue';
+import optionsStore from './lib/OptionsStore';
+import Options from './types/Options';
 
 // Main stylesheet
 import './scss/main.scss';
 
-export interface Options {
-	useCache: boolean;
-}
+export { Options };
 
 /**
  * Install Vue GitHub buttons as Vue plugin.
@@ -19,14 +19,8 @@ export interface Options {
  * @param {Object} [options={ useCache: true }] Options.
  */
 function install(vue: typeof Vue, options: Options = { useCache: true }) {
-	if (options.useCache) {
-		vue.mixin({
-			beforeCreate() {
-				// Use `_vue-github-buttons_useCache` as parameter for injecting into components.
-				this['_vue-github-buttons_useCache'] = true;
-			}
-		});
-	}
+	optionsStore.value = options;
+
 	vue.component('gh-btns-star', Star);
 	vue.component('gh-btns-fork', Fork);
 	vue.component('gh-btns-watch', Watch);

@@ -14,6 +14,7 @@
 import { Component, Mixins } from 'vue-property-decorator';
 
 import Button from './Button.vue';
+import optionsStore from '../lib/OptionsStore';
 import { getCountMixin, userMixin } from '../mixins';
 
 @Component({
@@ -28,9 +29,7 @@ export default class GitHubButtonFollow extends Mixins(
 ) {
 	async loadCount() {
 		if (this.showCount) {
-			const useCache = this['_vue-github-buttons_useCache']
-				? true
-				: false;
+			const { useCache } = optionsStore.value;
 			const requestPath = `/users/${this.user}`;
 			this.count = await this.getCount(
 				requestPath,

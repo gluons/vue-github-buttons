@@ -14,6 +14,7 @@
 import { Component, Mixins } from 'vue-property-decorator';
 
 import Button from './Button.vue';
+import optionsStore from '../lib/OptionsStore';
 import { getCountMixin, repoMixin } from '../mixins';
 
 @Component({
@@ -28,7 +29,7 @@ export default class GitHubButtonWatch extends Mixins(
 ) {
 	async loadCount() {
 		if (this.showCount) {
-			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
+			const { useCache } = optionsStore.value;
 			let requestPath = `/repos/${this.slug}`;
 			this.count = await this.getCount(
 				requestPath,
