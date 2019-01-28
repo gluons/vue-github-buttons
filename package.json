@@ -33,9 +33,9 @@
     "dev": "vue-up dev",
     "prebuild": "npm run extract",
     "build": "vue-up",
-    "lint": "eslint --ext .js,.vue .",
+    "lint": "tslint -p .",
     "pretest": "npm run extract",
-    "test": "karma start",
+    "test": "npm run lint && karma start",
     "prepublishOnly": "npm run build"
   },
   "peerDependencies": {
