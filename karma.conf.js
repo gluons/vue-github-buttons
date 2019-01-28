@@ -17,7 +17,7 @@ module.exports = function(config) {
 				reporter: 'html'
 			}
 		},
-		browsers: ['FirefoxHeadless'],
+		browsers: ['Firefox'],
 		singleRun: !!process.env.CI
 	});
 };
