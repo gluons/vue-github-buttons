@@ -1,4 +1,4 @@
-import Cacher from '../lib/cacher';
+import Cacher from '../lib/Cacher';
 import PathActionExecutor from '../lib/PathActionExecutor';
 import sendGhRequest from './sendGhRequest';
 
