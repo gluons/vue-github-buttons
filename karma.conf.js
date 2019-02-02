@@ -1,17 +1,15 @@
-const webpackConfig = require('./webpack.config.test');
+const webpack = require('./webpack.config.test');
 
-module.exports = function (config) {
+module.exports = function(config) {
 	config.set({
-		frameworks: ['mocha'],
-		files: [
-			'test/**/*.test.js'
-		],
+		frameworks: ['mocha', 'chai'],
+		files: ['test/*.test.ts'],
 		preprocessors: {
-			'**/*.test.js': ['webpack', 'sourcemap']
+			'**/*.test.ts': ['webpack', 'sourcemap']
 		},
-		webpack: webpackConfig,
+		webpack,
 		webpackMiddleware: {
-			stats: 'none'
+			stats: false
 		},
 		reporters: ['spec'],
 		client: {
@@ -19,7 +17,7 @@ module.exports = function (config) {
 				reporter: 'html'
 			}
 		},
-		browsers: ['Firefox'],
+		browsers: ['FirefoxHeadless'],
 		singleRun: !!process.env.CI
 	});
 };

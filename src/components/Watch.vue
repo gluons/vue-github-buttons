@@ -10,53 +10,40 @@
 	</gh-button>
 </template>
 
-<script>
-import Button from './Button.vue';
-import getCountMixin from '@/mixins/getCount';
+<script lang="ts">
+import { Component, Mixins } from 'vue-property-decorator';
 
-export default {
+import Button from './Button.vue';
+import optionsStore from '../lib/OptionsStore';
+import { getCountMixin, repoMixin } from '../mixins';
+
+@Component({
 	name: 'GitHubButtonWatch',
 	components: {
 		'gh-button': Button
-	},
-	mixins: [getCountMixin],
-	props: {
-		slug: {
-			type: String,
-			required: true
-		},
-		showCount: {
-			type: Boolean,
-			default: false
-		}
-	},
-	data() {
-		return {
-			count: null
-		};
-	},
-	computed: {
-		isLoading() {
-			if (this.showCount) {
-				return this.count == null;
-			} else {
-				return false;
-			}
-		}
-	},
-	async created() {
+	}
+})
+export default class GitHubButtonWatch extends Mixins(
+	getCountMixin,
+	repoMixin
+) {
+	async loadCount() {
 		if (this.showCount) {
-			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
+			const { useCache } = optionsStore.value;
 			let requestPath = `/repos/${this.slug}`;
-			this.count = await this.getCount(requestPath, 'subscribers_count', useCache);
-		}
-	},
-	async updated() {
-		if (this.showCount) {
-			let useCache = this['_vue-github-buttons_useCache'] ? true : false;
-			let requestPath = `/repos/${this.slug}`;
-			this.count = await this.getCount(requestPath, 'subscribers_count', useCache);
+			this.count = await this.getCount(
+				requestPath,
+				'subscribers_count',
+				useCache
+			);
 		}
 	}
-};
+
+	async created() {
+		await this.loadCount();
+	}
+	async updated() {
+		await this.loadCount();
+	}
+}
 </script>

@@ -1,8 +1,5 @@
-const nvl = require('nvl');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const webpack = require('webpack');
-
-const token = nvl(process.env.GITHUB_DEV_TOKEN, '');
 
 module.exports = {
 	mode: 'none',
@@ -10,40 +7,53 @@ module.exports = {
 		rules: [
 			{
 				test: /\.vue$/,
-				loader: 'vue-loader'
+				loader: 'vue-loader',
+				options: {
+					productionMode: false
+				}
 			},
 			{
-				test: /\.pug$/,
-				oneOf: [
-					{
-						resourceQuery: /^\?vue/,
-						use: 'pug-plain-loader'
+				test: /\.ts$/,
+				loader: 'ts-loader',
+				options: {
+					compilerOptions: {
+						sourceMap: true
 					},
-					{
-						use: 'pug-loader'
-					}
+					appendTsSuffixTo: [/\.vue$/]
+				}
+			},
+			{
+				test: /\.css$/,
+				use: [
+					'vue-style-loader',
+					{ loader: 'css-loader', options: { sourceMap: true } }
 				]
 			},
 			{
 				test: /\.scss$/,
 				use: [
 					'vue-style-loader',
-					'css-loader',
-					'sass-loader'
+					{
+						loader: 'css-loader',
+						options: { importLoaders: 1, sourceMap: true }
+					},
+					{ loader: 'sass-loader', options: { sourceMap: true } }
 				]
 			}
 		]
 	},
 	resolve: {
-		extensions: ['.wasm', '.mjs', '.js', '.json', '.vue'],
-		alias: require('./alias')
+		alias: {
+			vue$: 'vue/dist/vue.esm.js'
+		},
+		extensions: ['.wasm', '.mjs', '.ts', '.js', '.json', '.vue']
 	},
 	plugins: [
 		new VueLoaderPlugin(),
 		new webpack.DefinePlugin({
-			'GH_TOKEN': JSON.stringify(token)
+			GH_TOKEN: JSON.stringify('')
 		})
 	],
-	stats: 'none',
-	devtool: 'eval-source-map'
+	devtool: 'eval-source-map',
+	stats: false
 };
