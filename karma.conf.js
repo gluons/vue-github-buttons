@@ -5,7 +5,7 @@ module.exports = function(config) {
 		frameworks: ['mocha', 'chai'],
 		files: ['test/*.test.ts'],
 		preprocessors: {
-			'**/*.test.ts': ['webpack']
+			'**/*.test.ts': ['webpack', 'sourcemap']
 		},
 		webpack,
 		webpackMiddleware: {
