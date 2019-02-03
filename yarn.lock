@@ -329,10 +329,10 @@
     postcss-modules-sync "^1.0.0"
     source-map "0.6.*"
 
-"@vue/test-utils@^1.0.0-beta.24":
-  version "1.0.0-beta.28"
-  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-1.0.0-beta.28.tgz#767c43413df8cde86128735e58923803e444b9a5"
-  integrity sha512-uVbFJG0g/H9hf2pgWUdhvQYItRGzQ44cMFf00wp0YEo85pxuvM9e3mx8QLQfx6R2CogxbK4CvV7qvkLblehXeQ==
+"@vue/test-utils@^1.0.0-beta.29":
+  version "1.0.0-beta.29"
+  resolved "https://registry.npmjs.org/@vue/test-utils/-/test-utils-1.0.0-beta.29.tgz#c942cf25e891cf081b6a03332b4ae1ef430726f0"
+  integrity sha512-yX4sxEIHh4M9yAbLA/ikpEnGKMNBCnoX98xE1RwxfhQVcn0MaXNSj1Qmac+ZydTj6VBSEVukchBogXBTwc+9iA==
   dependencies:
     dom-event-types "^1.0.0"
     lodash "^4.17.4"
@@ -6024,10 +6024,10 @@ prettier@1.16.0:
   resolved "https://registry.npmjs.org/prettier/-/prettier-1.16.0.tgz#104dd25f5ee3d0c9d0a6ce4bb40ced8481d51219"
   integrity sha512-MCBCYeAuZfejUPdEpkleLWvpRBwLii/Sp5jQs0eb8Ul/drGIDjkL6tAU24tk6yCGf0KPV5rhPPPlczfBmN2pWQ==
 
-prettier@^1.16.1:
-  version "1.16.1"
-  resolved "https://registry.npmjs.org/prettier/-/prettier-1.16.1.tgz#534c2c9d7853f8845e5e078384e71973bd74089f"
-  integrity sha512-XXUITwIkGb3CPJ2hforHah/zTINRyie5006Jd2HKy2qz7snEJXl0KLfsJZW/wst9g6R2rFvqba3VpNYdu1hDcA==
+prettier@^1.16.3:
+  version "1.16.3"
+  resolved "https://registry.npmjs.org/prettier/-/prettier-1.16.3.tgz#8c62168453badef702f34b45b6ee899574a6a65d"
+  integrity sha512-kn/GU6SMRYPxUakNXhpP0EedT/KmaPzr0H5lIsDogrykbaxOpOfAFfk5XA7DZrJyMAv1wlMV3CPcZruGXVVUZw==
 
 pretty-error@^2.0.2:
   version "2.1.1"
@@ -7686,10 +7686,10 @@ typedarray@^0.0.6:
   resolved "https://registry.npmjs.org/typedarray/-/typedarray-0.0.6.tgz#867ac74e3864187b1d3d47d996a78ec5c8830777"
   integrity sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=
 
-typescript@^3.2.4:
-  version "3.2.4"
-  resolved "https://registry.npmjs.org/typescript/-/typescript-3.2.4.tgz#c585cb952912263d915b462726ce244ba510ef3d"
-  integrity sha512-0RNDbSdEokBeEAkgNbxJ+BLwSManFy9TeXz8uW+48j/xhEXv1ePME60olyzw2XzUqUBNAYFeJadIqAgNqIACwg==
+typescript@^3.3.1:
+  version "3.3.1"
+  resolved "https://registry.npmjs.org/typescript/-/typescript-3.3.1.tgz#6de14e1db4b8a006ac535e482c8ba018c55f750b"
+  integrity sha512-cTmIDFW7O0IHbn1DPYjkiebHxwtCMU+eTy30ZtJNBPF9j2O1ITu5XH2YnBeVRKWHqF+3JQwWJv0Q0aUgX8W7IA==
 
 uglify-js@3.4.x:
   version "3.4.9"
