@@ -25,7 +25,8 @@
   ],
   "files": [
     "dist",
-    "nuxt"
+    "nuxt",
+    "plugins"
   ],
   "scripts": {
     "extract": "ts-node -O \"{ \\\"module\\\": \\\"commonjs\\\" }\" ./script/extractIcons.ts",
