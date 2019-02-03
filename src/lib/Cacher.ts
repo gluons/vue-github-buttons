@@ -30,7 +30,7 @@ export default class Cacher {
 	 * @memberOf Cacher
 	 */
 	static supportSession(): boolean {
-		return window.sessionStorage ? true : false;
+		return (typeof window !== 'undefined') && window.sessionStorage ? true : false;
 	}
 
 	/**
