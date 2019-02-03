@@ -1,6 +1,13 @@
-const webpack = require('./webpack.config.test');
+import { Config } from 'karma';
+import webpack from './webpack.config.test';
 
-module.exports = function(config) {
+declare module 'karma' {
+	interface ClientOptions {
+		mocha: any;
+	}
+}
+
+export default (config: Config) => {
 	config.set({
 		frameworks: ['mocha', 'chai'],
 		files: ['test/*.test.ts'],

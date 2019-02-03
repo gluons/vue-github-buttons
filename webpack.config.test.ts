@@ -1,7 +1,7 @@
-const VueLoaderPlugin = require('vue-loader/lib/plugin');
-const webpack = require('webpack');
+import VueLoaderPlugin from 'vue-loader/lib/plugin';
+import { Configuration, DefinePlugin } from 'webpack';
 
-module.exports = {
+export default {
 	mode: 'none',
 	module: {
 		rules: [
@@ -50,10 +50,10 @@ module.exports = {
 	},
 	plugins: [
 		new VueLoaderPlugin(),
-		new webpack.DefinePlugin({
+		new DefinePlugin({
 			GH_TOKEN: JSON.stringify('')
 		})
 	],
 	devtool: 'eval-source-map',
 	stats: false
-};
+} as Configuration;
