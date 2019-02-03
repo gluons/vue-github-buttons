@@ -17,8 +17,9 @@
 		- [Module options](#module-options)
 			- [`css`](#css)
 			- [`useCache`](#usecache)
+	- [Using with VuePress](#using-with-vuepress)
 	- [API](#api)
-		- [Plugin Option](#plugin-option)
+		- [Plugin Options](#plugin-options)
 			- [`useCache`](#usecache-1)
 		- [Components](#components)
 			- [`gh-btns-watch`](#gh-btns-watch)
@@ -115,9 +116,36 @@ Default: `true`
 
 Enable caching. (See below)
 
+## Using with [VuePress](https://vuepress.vuejs.org/)
+
+> Require **VuePress** v1.x
+
+Add **Vue GitHub Buttons** to your `plugins` in `.vuepress/config.js`.
+
+```javascript
+const VueGitHubButtons = require('');
+
+module.exports = {
+	plugins: [
+		require('vue-github-buttons/plugins/vuepress'),
+
+		/* Or using plugin with options */
+
+		[
+			require('vue-github-buttons/plugins/vuepress'),
+			{
+				useCache: false
+			}
+		]
+	]
+}
+```
+
+Plugin options are the same as [Vue plugin options](#plugin-options).
+
 ## API
 
-### Plugin Option
+### Plugin Options
 
 #### `useCache`
 Type: `Boolean`  
