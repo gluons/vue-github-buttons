@@ -1,4 +1,4 @@
-module.exports = ({ useCache }) => {
+module.exports = ({ useCache } = { useCache: true }) => {
 	return {
 		name: 'vue-github-buttons',
 		enhanceAppFiles() {
