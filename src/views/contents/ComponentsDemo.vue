@@ -5,22 +5,22 @@
 		h3 Watch button
 		p
 			gh-btns-watch(slug='vuejs/vue' show-count)
-		highlight-code(lang='html')='<gh-btns-watch slug="vuejs/vue" show-count></gh-btns-watch>'
+		highlight-code(lang='vue')='<gh-btns-watch slug="vuejs/vue" show-count></gh-btns-watch>'
 	.component-demo-container
 		h3 Star button
 		p
 			gh-btns-star(slug='vuejs/vue' show-count)
-		highlight-code(lang='html')='<gh-btns-star slug="vuejs/vue" show-count></gh-btns-star>'
+		highlight-code(lang='vue')='<gh-btns-star slug="vuejs/vue" show-count></gh-btns-star>'
 	.component-demo-container
 		h3 Fork button
 		p
 			gh-btns-fork(slug='vuejs/vue' show-count)
-		highlight-code(lang='html')='<gh-btns-fork slug="vuejs/vue" show-count></gh-btns-fork>'
+		highlight-code(lang='vue')='<gh-btns-fork slug="vuejs/vue" show-count></gh-btns-fork>'
 	.component-demo-container
 		h3 Follow button
 		p
 			gh-btns-follow(user='yyx990803' show-count)
-		highlight-code(lang='html')='<gh-btns-follow user="yyx990803" show-count></gh-btns-follow>'
+		highlight-code(lang='vue')='<gh-btns-follow user="yyx990803" show-count></gh-btns-follow>'
 </template>
 
 <script>

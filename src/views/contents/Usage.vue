@@ -3,7 +3,7 @@
 	h2 Usage
 	highlight-code(lang='javascript')
 		include ../usage-codes/main.js
-	highlight-code(lang='html')
+	highlight-code(lang='vue')
 		include:escape-html ../usage-codes/component.vue
 	hr.gap
 	h2 Using with #[blank-link(url='https://nuxtjs.org/') Nuxt]
