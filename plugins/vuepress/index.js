@@ -11,12 +11,6 @@ module.exports = ({ useCache } = { useCache: true }) => {
 				};
 				`
 			};
-		},
-		globalUIComponents: [
-			'gh-btns-star',
-			'gh-btns-fork',
-			'gh-btns-watch',
-			'gh-btns-follow'
-		]
+		}
 	};
 };
