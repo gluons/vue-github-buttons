@@ -1,4 +1,4 @@
-import { Configuration } from '@gluons/vue-up';
+import { Configuration, nodeExternals } from '@gluons/vue-up';
 import nvl from 'nvl';
 import { resolve } from 'path';
 
@@ -8,6 +8,11 @@ const config: Configuration = {
 	fileName: 'vue-github-buttons',
 	define: {
 		GH_TOKEN: ''
+	},
+	externals: {
+		module: nodeExternals({
+			whitelist: [/vue-class-component/, /vue-property-decorator/]
+		})
 	},
 	dev: {
 		entry: resolve(__dirname, './dev/index.ts'),
