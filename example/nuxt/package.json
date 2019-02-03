@@ -11,8 +11,8 @@
   "author": "Saran Tanpituckpong <sarunta@gmail.com>",
   "license": "UNLICENSED",
   "dependencies": {
-    "nuxt": "^1.4.1",
+    "nuxt": "^2.4.2",
     "vue": "^2.5.16",
-    "vue-github-buttons": "^2.1.0"
+    "vue-github-buttons": "^3.0.0"
   }
 }
