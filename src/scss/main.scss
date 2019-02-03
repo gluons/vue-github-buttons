@@ -21,7 +21,7 @@
 	margin: 0 5px;
 
 	a {
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 	&.loading {
 		visibility: hidden;
@@ -61,7 +61,7 @@
 		background-position: 0 -0.5em;
 		background-repeat: repeat-x;
 		border-color: rgba(27, 31, 35, 0.35);
-		text-decoration: none;
+		text-decoration: none !important;
 	}
 	&:active {
 		background-color: #e9ecef;
@@ -93,7 +93,7 @@ a.social-count {
 	font-weight: 600;
 	line-height: 20px;
 	padding: 3px 10px;
-	text-decoration: none;
+	text-decoration: none !important;
 	vertical-align: middle;
 
 	&:hover {
