@@ -28,6 +28,25 @@
 	p Type: #[highlight-code(lang='javascript', inline) Boolean]
 	p Default: #[highlight-code(lang='javascript', inline) true]
 	p Enable caching. (See below)
+	hr.gap
+	h2 Using with #[blank-link(url='https://vuepress.vuejs.org/') VuePress]
+	blockquote Require #[strong VuePress] v1.x
+	p.with-code Add #[strong Vue GitHub Buttons] to your plugins in #[highlight-code(inline) .vuepress/config.js].
+	highlight-code(lang='js').
+		module.exports = {
+			plugins: [
+				require('vue-github-buttons/plugins/vuepress'),
+
+				/* Or using plugin with options */
+
+				[
+					require('vue-github-buttons/plugins/vuepress'),
+					{
+						useCache: false
+					}
+				]
+			]
+		}
 </template>
 
 <script>
