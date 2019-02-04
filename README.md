@@ -34,7 +34,7 @@ Via [NPM](https://www.npmjs.com):
 [![NPM](https://nodei.co/npm/vue-github-buttons.png?downloads=true&downloadRank=true&stars=true)](https://www.npmjs.com/package/vue-github-buttons)
 
 ```bash
-npm install -save vue-github-buttons
+npm install vue-github-buttons
 ```
 
 Via [Yarn](https://yarnpkg.com):
@@ -123,8 +123,6 @@ Enable caching. (See below)
 Add **Vue GitHub Buttons** to your `plugins` in `.vuepress/config.js`.
 
 ```javascript
-const VueGitHubButtons = require('');
-
 module.exports = {
 	plugins: [
 		require('vue-github-buttons/plugins/vuepress'),
