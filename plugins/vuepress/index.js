@@ -4,7 +4,7 @@ module.exports = ({ useCache } = { useCache: true }) => {
 		enhanceAppFiles() {
 			return {
 				name: 'vue-github-buttons-dynamic-code',
-				content: `import VueGitHubButtons from 'vue-github-buttons/dist/vue-github-buttons.es';
+				content: `import VueGitHubButtons from 'vue-github-buttons';
 
 				import 'vue-github-buttons/dist/vue-github-buttons.css';
 
