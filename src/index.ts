@@ -12,6 +12,17 @@ import './scss/main.scss';
 
 export { Options };
 
+if (!IS_WEB_BUNDLE) {
+	const nodeFetch = require('node-fetch');
+
+	if (global && !global.fetch) {
+		global.fetch = nodeFetch;
+		global.Headers = nodeFetch.Headers;
+		global.Request = nodeFetch.Request;
+		global.Response = nodeFetch.Response;
+	}
+}
+
 /**
  * Install Vue GitHub buttons as Vue plugin.
  *
