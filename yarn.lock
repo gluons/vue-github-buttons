@@ -307,6 +307,13 @@
   resolved "https://registry.yarnpkg.com/@types/mocha/-/mocha-5.2.6.tgz#b8622d50557dd155e9f2f634b7d68fd38de5e94b"
   integrity sha512-1axi39YdtBI7z957vdqXI4Ac25e7YihYQtJa+Clnxg1zTJEaIRbndt71O3sP4GAMgiAm0pY26/b9BrY4MR/PMw==
 
+"@types/node-fetch@^2.3.0":
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.3.0.tgz#d1da24d56e9f1774a0e50a93cc8ee2a7922f4f0e"
+  integrity sha512-8hiAWrp7m9c0+LWLSMrUdPAoTJogvarqUdpQsyV9BlWnxVHTpdopNW0ldB4H8s/G4dg/KJLpqJIMb0GaZDf8/Q==
+  dependencies:
+    "@types/node" "*"
+
 "@types/node@*":
   version "11.9.4"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-11.9.4.tgz#ceb0048a546db453f6248f2d1d95e937a6f00a14"
@@ -5326,6 +5333,11 @@ node-environment-flags@1.0.4:
   integrity sha512-M9rwCnWVLW7PX+NUWe3ejEdiLYinRpsEre9hMkU/6NS4h+EEulYaDH1gCEZ2gyXsmw+RXYDaV2JkkTNcsPDJ0Q==
   dependencies:
     object.getownpropertydescriptors "^2.0.3"
+
+node-fetch@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.npmjs.org/node-fetch/-/node-fetch-2.3.0.tgz#1a1d940bbfb916a1d3e0219f037e89e71f8c5fa5"
+  integrity sha512-MOd8pV3fxENbryESLgVIeaGKrdl+uaYhCSSVkjeOb/31/njTpcis5aWfdqgNlHIrKOLRbMnfPINPOML2CIFeXA==
 
 node-forge@0.7.5:
   version "0.7.5"
