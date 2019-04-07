@@ -51,7 +51,8 @@ export default {
 	plugins: [
 		new VueLoaderPlugin(),
 		new DefinePlugin({
-			GH_TOKEN: JSON.stringify('')
+			GH_TOKEN: JSON.stringify(''),
+			IS_WEB_BUNDLE: JSON.stringify(false)
 		})
 	],
 	devtool: 'eval-source-map',
