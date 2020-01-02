@@ -32,10 +32,10 @@ if (!IS_WEB_BUNDLE) {
 function install(vue: typeof Vue, options: Options = { useCache: true }) {
 	optionsStore.value = options;
 
-	vue.component('gh-btns-star', Star);
-	vue.component('gh-btns-fork', Fork);
-	vue.component('gh-btns-watch', Watch);
-	vue.component('gh-btns-follow', Follow);
+	vue.component('GhBtnsStar', Star);
+	vue.component('GhBtnsFork', Fork);
+	vue.component('GhBtnsWatch', Watch);
+	vue.component('GhBtnsFollow', Follow);
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
