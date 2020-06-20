@@ -6,6 +6,7 @@
 				:href="fullLink"
 				class="gh-button"
 				target="_blank"
+				rel="noopener"
 			>
 				<component :is="iconComponentName" />
 				<slot />
@@ -15,6 +16,7 @@
 				:href="fullCountLink"
 				:target="hasCountLink ? '_blank' : null"
 				class="social-count"
+				rel="noopener"
 			>
 				{{ count | formatNumber }}
 			</a>
