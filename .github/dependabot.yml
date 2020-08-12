@@ -13,3 +13,6 @@ updates:
       timezone: "Asia/Bangkok"
     assignees:
       - "gluons"
+    ignore:
+      - dependency-name: "@types/node"
+      
